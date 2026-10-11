@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Clearlooks-classic-deepsky-0.1
+Comment=GTK2, GTK3 and GTK4 port of the Clearlooks classic theme (clearlooks engine 0.6.2)
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Clearlooks-classic-deepsky-0.1

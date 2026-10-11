@@ -1,0 +1,15 @@
+Original authors (gtk-engines 2.20.2, engines/industrial/AUTHORS):
+
+Designed by Tigert and Jimmac
+Implemented by Christopher James Lahey
+
+Based on GTK Bluecurve Theme
+  Designed by Garrett LeSage
+  Implemented by Alexander Larsson
+
+Parts of the code based on Metal theme
+  Randy Gordon <randy@integrand.com>
+  Owen Taylor <otaylor@redhat.com>
+
+Cairo port by
+  Benjamin Berg <benjamin@sipsolutions.net>

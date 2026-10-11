@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Clearlooks
+Comment=GTK3 and GTK4 port of the GTK2 Clearlooks theme and engine (Gummy style)
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Clearlooks
+IconTheme=Adwaita

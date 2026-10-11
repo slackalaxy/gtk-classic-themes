@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Industrial
+Comment=GTK3/4 port of the GTK2 Industrial theme and engine
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Industrial
+IconTheme=Adwaita

@@ -1,0 +1,547 @@
+/* ThinIce (GTK4)
+ *
+ * GTK4 version of the ThinIce port of the GTK2 theme (gtk-engines 2.20.2: engines/thinice/src/thinice_theme_draw.c and
+ * themes/ThinIce/gtk-2.0/gtkrc), using the same colours and 1px lines as the GTK3 theme, adapted to GTK4 CSS nodes
+ * (popover menus, entry > text, spin buttons as one box, focus-visible outlines, no scrollbar steppers).
+ * bg #D3D3DD (active #C1C1CC, prelight #E5E5F7), light #ffffff, dark #8e8ea1 (active #838393, prelight #8686c7), selection #336699, views #E5E5F7.
+ * Applications built on libadwaita ignore third-party GTK4 themes.
+ */
+
+/* ===== palette ===== */
+@define-color window_bg_color         #D3D3DD;
+@define-color window_fg_color         #000000;
+@define-color view_bg_color           #E5E5F7;
+@define-color view_fg_color           #000000;
+@define-color accent_bg_color         #336699;
+@define-color accent_color            #336699;
+@define-color accent_fg_color         #ffffff;
+@define-color headerbar_bg_color      #D3D3DD;
+@define-color headerbar_fg_color      #000000;
+@define-color popover_bg_color        #D3D3DD;
+@define-color popover_fg_color        #000000;
+@define-color card_bg_color           #D3D3DD;
+@define-color card_fg_color           #000000;
+@define-color theme_bg_color          #D3D3DD;
+@define-color theme_fg_color          #000000;
+@define-color theme_base_color        #E5E5F7;
+@define-color theme_text_color        #000000;
+@define-color theme_selected_bg_color #336699;
+@define-color theme_selected_fg_color #ffffff;
+@define-color insensitive_bg_color    #D3D3DD;
+@define-color insensitive_fg_color    #747474;
+@define-color insensitive_base_color  #E5E5F7;
+@define-color insensitive_text_color  #747474;
+@define-color unfocused_selected_bg   #808080;
+@define-color tooltip_bg_color        #EEE1B3;
+@define-color tooltip_fg_color        #000000;
+@define-color warning_color           #f57900;
+@define-color error_color             #cc0000;
+@define-color success_color           #4e9a06;
+@define-color link_color              #0000ee;
+@define-color visited_link_color      #551a8b;
+
+/* ===== base ===== */
+* {
+  background-clip: padding-box;
+  outline-style: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  box-shadow: none;
+}
+/* GTK4 draws outlines on any node that sets one, so only show a 1px line for keyboard focus */
+button:focus-visible, tab:focus-visible, modelbutton:focus-visible, row:focus-visible {
+  outline-color: #000000;
+  outline-style: solid;
+  outline-offset: -3px;
+  outline-width: 1px;
+}
+
+window, window.background { background-color: @window_bg_color; color: @window_fg_color; }
+label { color: inherit; }
+label:disabled { color: @insensitive_fg_color; }
+.dim-label { opacity: 0.6; }
+
+/* hline / vline: a dark line with a light line next to it */
+separator { background-color: transparent; min-width: 2px; min-height: 2px; }
+separator.horizontal { background-image: linear-gradient(to bottom, #8e8ea1 0px, #8e8ea1 1px, #ffffff 1px, #ffffff 2px, transparent 2px); min-height: 2px; }
+separator.vertical { background-image: linear-gradient(to right, #8e8ea1 0px, #8e8ea1 1px, #ffffff 1px, #ffffff 2px, transparent 2px); min-width: 2px; }
+
+selection, *:selected { background-color: #336699; color: #ffffff; }
+text selection, label selection, textview text selection { background-color: #336699; color: #ffffff; }
+entry text selection { background-color: #808080; color: #ffffff; }
+entry:focus-within text selection { background-color: #336699; color: #ffffff; }
+
+link, *:link { color: @link_color; }
+link:visited, *:visited { color: @visited_link_color; }
+
+/* ===== buttons: raised = light top/left + dark bottom/right; pressed = dark top/left + light bottom/right on the active bg ===== */
+button {
+  min-height: 17px; min-width: 16px;
+  padding: 3px 7px;
+  border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0;
+  background-color: #D3D3DD; background-image: none;
+  color: @theme_fg_color;
+  box-shadow: none;
+}
+button:hover { background-color: #E5E5F7; border-color: #ffffff #8686c7 #8686c7 #ffffff; }
+button:active, button:checked, button:hover:active, button:hover:checked {
+  background-color: #C1C1CC; border-color: #838393 #ffffff #ffffff #838393;
+}
+button:disabled, button:disabled:hover { color: @insensitive_fg_color; background-color: #D3D3DD; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; }
+button:disabled:active, button:disabled:checked { color: @insensitive_fg_color; background-color: #C1C1CC; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; }
+button.circular { border-radius: 0; }
+button.default, button.suggested-action, button.destructive-action {
+  background-image: url("assets/default.png"); background-repeat: no-repeat; background-position: 0 0; background-origin: border-box;
+}
+button.link, button.link:hover, button.link:active { border-color: transparent; background-image: none; background-color: transparent; box-shadow: none; color: @link_color; }
+
+/* flat buttons (headerbar, window controls, toolbars) show the frame only when hovered or pressed */
+button.flat, headerbar button, windowcontrols button, .toolbar button {
+  background-image: none; background-color: transparent; border-color: transparent; box-shadow: none;
+}
+button.flat:hover, headerbar button:hover, windowcontrols button:hover, .toolbar button:hover {
+  background-color: #E5E5F7; border-color: #ffffff #8686c7 #8686c7 #ffffff;
+}
+button.flat:active, button.flat:checked, headerbar button:active, headerbar button:checked, windowcontrols button:active, .toolbar button:active, .toolbar button:checked {
+  background-color: #C1C1CC; border-color: #838393 #ffffff #ffffff #838393;
+}
+button.flat:disabled, .toolbar button:disabled { background-image: none; background-color: transparent; border-color: transparent; }
+
+/* linked buttons */
+.linked:not(.vertical) > button:not(:first-child),
+.linked:not(.vertical) > menubutton:not(:first-child) > button,
+.linked:not(.vertical) > dropdown:not(:first-child) > button { border-left-width: 0; }
+.linked:not(.vertical) > button:checked:not(:first-child), .linked:not(.vertical) > button:active:not(:first-child) { border-left-width: 1px; }
+.linked.vertical > button:not(:first-child) { border-top-width: 0; }
+.linked.vertical > button:checked:not(:first-child), .linked.vertical > button:active:not(:first-child) { border-top-width: 1px; }
+
+/* ===== check boxes (10px) and radio buttons (13px): bitmaps of the engine's own drawing ===== */
+check, radio {
+  min-width: 10px; min-height: 10px;
+  margin: 0 3px 0 2px; padding: 0;
+  border: none; border-radius: 0;
+  background-color: transparent; background-image: url("assets/check-off.png");
+  background-repeat: no-repeat; background-position: center;
+  box-shadow: none; -gtk-icon-source: none;
+}
+check:hover         { background-image: url("assets/check-off-hover.png"); }
+check:active        { background-image: url("assets/check-off-active.png"); }
+check:disabled      { background-image: url("assets/check-off-disabled.png"); }
+check:checked       { background-image: url("assets/check-on.png"); }
+check:checked:hover { background-image: url("assets/check-on-hover.png"); }
+check:checked:active { background-image: url("assets/check-on-active.png"); }
+check:checked:disabled { background-image: url("assets/check-on-disabled.png"); }
+check:indeterminate { background-image: url("assets/check-mixed.png"); }
+check:indeterminate:hover { background-image: url("assets/check-mixed-hover.png"); }
+check:indeterminate:active { background-image: url("assets/check-mixed-active.png"); }
+check:indeterminate:disabled { background-image: url("assets/check-mixed-disabled.png"); }
+radio, radio:checked, radio:indeterminate { min-width: 13px; min-height: 13px; }
+radio               { background-image: url("assets/radio-off.png"); }
+radio:hover         { background-image: url("assets/radio-off-hover.png"); }
+radio:active        { background-image: url("assets/radio-off-active.png"); }
+radio:disabled      { background-image: url("assets/radio-off-disabled.png"); }
+radio:checked       { background-image: url("assets/radio-on.png"); }
+radio:checked:hover { background-image: url("assets/radio-on-hover.png"); }
+radio:checked:active { background-image: url("assets/radio-on-active.png"); }
+radio:checked:disabled { background-image: url("assets/radio-on-disabled.png"); }
+radio:indeterminate { background-image: url("assets/radio-mixed.png"); }
+radio:indeterminate:hover { background-image: url("assets/radio-mixed-hover.png"); }
+radio:indeterminate:active { background-image: url("assets/radio-mixed-active.png"); }
+radio:indeterminate:disabled { background-image: url("assets/radio-mixed-disabled.png"); }
+/* menu items draw the mark only when it is set */
+modelbutton check, modelbutton radio, modelbutton check:hover, modelbutton radio:hover,
+modelbutton check:disabled, modelbutton radio:disabled { background-color: transparent; background-image: none; margin: 0 3px; }
+modelbutton check:checked, modelbutton check:checked:active { background-image: url("assets/check-on.png"); }
+modelbutton check:checked:hover { background-image: url("assets/check-on-hover.png"); }
+modelbutton check:checked:disabled { background-image: url("assets/check-on-disabled.png"); }
+modelbutton radio:checked, modelbutton radio:checked:active { background-image: url("assets/radio-on.png"); }
+modelbutton radio:checked:hover { background-image: url("assets/radio-on-hover.png"); }
+modelbutton radio:checked:disabled { background-image: url("assets/radio-on-disabled.png"); }
+modelbutton check:indeterminate, modelbutton check:indeterminate:hover { background-image: url("assets/check-mixed.png"); }
+modelbutton radio:indeterminate, modelbutton radio:indeterminate:hover { background-image: url("assets/radio-mixed.png"); }
+
+/* ===== entries: 1px sunken frame (dark top/left, light bottom/right) ===== */
+entry {
+  min-height: 17px;
+  padding: 2px 3px;
+  border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0;
+  background-color: #E5E5F7; background-image: none;
+  color: @theme_text_color; caret-color: @theme_text_color;
+  box-shadow: none;
+}
+entry > text { background: none; border: none; box-shadow: none; outline: none; min-height: 0; }
+entry:disabled { color: @insensitive_text_color; }
+entry > progress, entry progress { margin: 0; border: none; border-radius: 0; background-color: #336699; background-image: none; }
+entry image { color: alpha(@theme_text_color, 0.6); }
+entry.error { box-shadow: inset 0 0 0 1px @error_color; }
+entry.warning { box-shadow: inset 0 0 0 1px @warning_color; }
+
+/* ===== spin buttons: one sunken box with the raised stepper buttons inside ===== */
+spinbutton:not(.vertical) {
+  border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0;
+  background-color: #E5E5F7; color: @theme_text_color;
+  box-shadow: none; padding: 0;
+}
+spinbutton:not(.vertical) > text { padding: 2px 3px; border: none; background: none; box-shadow: none; min-height: 17px; }
+spinbutton:not(.vertical) > button {
+  min-width: 14px; min-height: 0; padding: 0 1px; margin: 0;
+  border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0;
+}
+spinbutton:not(.vertical) > button:hover { border-color: #ffffff #8686c7 #8686c7 #ffffff; }
+spinbutton:not(.vertical) > button:active { border-color: #838393 #ffffff #ffffff #838393; }
+spinbutton.vertical > text { border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0; }
+spinbutton.vertical > button { border-radius: 0; }
+
+/* ===== drop downs ===== */
+dropdown > button { padding: 3px 4px 3px 7px; }
+dropdown popover listview, dropdown popover listview.view, dropdown popover .view, dropdown popover list { background-color: transparent; }
+dropdown popover row { padding: 2px 4px; border: none; border-radius: 0; }
+dropdown popover row:selected { background-color: #336699; background-image: none; color: #ffffff; }
+
+/* ===== arrows: the engine's solid 5x3 triangles ===== */
+arrow {
+  min-width: 16px; min-height: 16px; -gtk-icon-source: none;
+  background-image: url("assets/arrow-down.png"); background-repeat: no-repeat; background-position: center;
+}
+arrow.top    { background-image: url("assets/arrow-up.png"); }
+arrow.bottom { background-image: url("assets/arrow-down.png"); }
+arrow.left   { background-image: url("assets/arrow-left.png"); }
+arrow.right  { background-image: url("assets/arrow-right.png"); }
+arrow:disabled { background-image: url("assets/arrow-down-disabled.png"); }
+arrow.top:disabled { background-image: url("assets/arrow-up-disabled.png"); }
+arrow.left:disabled { background-image: url("assets/arrow-left-disabled.png"); }
+arrow.right:disabled { background-image: url("assets/arrow-right-disabled.png"); }
+
+/* ===== scrollbars: 13px (1px trough lines + 11px slider); trough = active bg with a sunken frame; the slider is shaped
+ * (top-left and bottom-right corners cut) and carries two slashes. GTK4 scrollbars have no stepper buttons. ===== */
+scrollbar { background: none; border: none; border-radius: 0; padding: 0; }
+scrollbar trough { border: none; border-radius: 0; background-color: #C1C1CC; background-image: none; }
+scrollbar.vertical trough { border: 1px solid; border-color: transparent #ffffff transparent #838393; border-top-width: 0; border-bottom-width: 0; }
+scrollbar.horizontal trough { border: 1px solid; border-color: #838393 transparent #ffffff transparent; border-left-width: 0; border-right-width: 0; }
+scrollbar slider { min-width: 11px; min-height: 11px; border: none; border-radius: 0; margin: 0; }
+scrollbar.vertical slider { min-height: 14px; }
+scrollbar.horizontal slider { min-width: 14px; }
+scrollbar.vertical slider {
+  background-color: #D3D3DD;
+  background-image: url("assets/slash-v.png"), url("assets/slider-tl.png"), url("assets/slider-br.png"),
+    linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scrollbar.vertical slider:hover {
+  background-color: #E5E5F7;
+  background-image: url("assets/slash-v-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
+    linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scrollbar.vertical slider:active {
+  background-color: #C1C1CC;
+  background-image: url("assets/slash-v-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
+    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scrollbar.horizontal slider {
+  background-color: #D3D3DD;
+  background-image: url("assets/slash-h.png"), url("assets/slider-tl.png"), url("assets/slider-br.png"),
+    linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scrollbar.horizontal slider:hover {
+  background-color: #E5E5F7;
+  background-image: url("assets/slash-h-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
+    linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scrollbar.horizontal slider:active {
+  background-color: #C1C1CC;
+  background-image: url("assets/slash-h-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
+    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scrolledwindow { background-color: @theme_bg_color; }
+scrolledwindow.frame { border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0; }
+scrolledwindow undershoot.top, scrolledwindow undershoot.bottom, scrolledwindow undershoot.left, scrolledwindow undershoot.right { background-image: none; }
+scrolledwindow junction { background-color: #D3D3DD; border: none; }
+
+/* ===== scales: 11px sunken trough (active bg); slider = the same shaped box with two slashes ===== */
+scale trough {
+  background-color: #C1C1CC; background-image: none;
+  border: 1px solid; border-color: #838393 #ffffff #ffffff #838393; border-radius: 0;
+  min-height: 11px; min-width: 11px;
+}
+scale trough highlight, scale trough fill { background-color: transparent; background-image: none; border: none; margin: 0; min-height: 0; min-width: 0; }
+scale.horizontal { min-height: 13px; padding: 0; }
+scale.vertical   { min-width: 13px;  padding: 0; }
+scale slider { border: none; border-radius: 0; }
+scale.horizontal slider { min-width: 31px; min-height: 11px; margin: 0; }
+scale.vertical slider   { min-height: 31px; min-width: 11px; margin: 0; }
+scale.horizontal slider {
+  background-color: #D3D3DD;
+  background-image: url("assets/slash-h.png"), url("assets/slider-tl.png"), url("assets/slider-br.png"),
+    linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scale.horizontal slider:hover {
+  background-color: #E5E5F7;
+  background-image: url("assets/slash-h-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
+    linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scale.horizontal slider:active {
+  background-color: #C1C1CC;
+  background-image: url("assets/slash-h-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
+    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scale.vertical slider {
+  background-color: #D3D3DD;
+  background-image: url("assets/slash-v.png"), url("assets/slider-tl.png"), url("assets/slider-br.png"),
+    linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#8e8ea1, #8e8ea1), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scale.vertical slider:hover {
+  background-color: #E5E5F7;
+  background-image: url("assets/slash-v-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
+    linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scale.vertical slider:active {
+  background-color: #C1C1CC;
+  background-image: url("assets/slash-v-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
+    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
+  background-repeat: no-repeat;
+}
+scale marks { background-color: transparent; background-image: none; border: none; box-shadow: none; color: #8e8ea1; }
+scale marks indicator { background-color: #8e8ea1; background-image: none; border: none; min-height: 4px; min-width: 1px; }
+scale.vertical marks indicator { min-height: 1px; min-width: 4px; }
+
+/* ===== progress bars: sunken trough on the active bg, selection-colour bar ===== */
+progressbar trough, levelbar trough {
+  background-color: #C1C1CC; background-image: none;
+  border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0;
+  min-height: 0; min-width: 0;
+}
+progressbar.horizontal trough, levelbar.horizontal trough { min-height: 17px; }
+progressbar.vertical trough, levelbar.vertical trough { min-width: 17px; }
+progressbar progress, levelbar block.filled {
+  background-color: #336699; background-image: none;
+  border: none; border-radius: 0; box-shadow: none; margin: 2px;
+}
+progressbar.horizontal progress { min-width: 0; min-height: 13px; }
+progressbar.vertical progress { min-height: 0; min-width: 13px; }
+progressbar text { color: @theme_fg_color; font-size: smaller; }
+levelbar block.empty { background-color: transparent; }
+
+/* ===== menus and popovers (GTK4 menus are popovers): 1px dark frame, selection-colour highlight with white text ===== */
+popover.background, popover { background-color: transparent; }
+popover > contents, popover.background > contents {
+  background-color: #D3D3DD; color: @theme_fg_color;
+  border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0;
+  box-shadow: none; padding: 1px;
+}
+popover.menu > contents { padding: 1px; }
+popover separator { margin: 2px 0; }
+modelbutton, menuitem {
+  min-height: 15px; padding: 2px 4px;
+  border: none; border-radius: 0;
+  background-color: transparent; background-image: none;
+  color: @theme_fg_color; box-shadow: none;
+}
+modelbutton:hover, modelbutton:selected, modelbutton:checked:hover, menuitem:hover, menuitem:selected {
+  background-color: #336699; background-image: none; color: #ffffff;
+}
+modelbutton:disabled { color: @insensitive_fg_color; background-image: none; background-color: transparent; }
+modelbutton arrow, modelbutton:not(:hover):not(:selected) arrow, modelbutton:not(:hover):not(:selected) arrow:disabled { color: inherit; background-image: url("assets/arrow-right.png"); }
+modelbutton:hover arrow, modelbutton:selected arrow, modelbutton:hover arrow:disabled { background-image: url("assets/arrow-right-selected.png"); }
+modelbutton arrow.left { background-image: url("assets/arrow-left.png"); }
+modelbutton:hover arrow.left { background-image: url("assets/arrow-left-selected.png"); }
+
+/* menubar: raised 1px frame; items turn selection-blue like menu items */
+menubar, popovermenubar {
+  background-color: #D3D3DD; background-image: none;
+  border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0; padding: 0;
+  color: @theme_fg_color;
+}
+menubar > item, popovermenubar > item {
+  padding: 2px 6px;
+  border: none; border-radius: 0;
+  background-color: transparent; color: @theme_fg_color;
+}
+menubar > item:hover, popovermenubar > item:hover, menubar > item:checked, popovermenubar > item:checked { background-color: #336699; color: #ffffff; }
+
+/* ===== tooltips ===== */
+tooltip, tooltip.background {
+  background-color: @tooltip_bg_color; color: @tooltip_fg_color;
+  border: 1px solid #000000; border-radius: 0; padding: 3px;
+}
+tooltip label { color: @tooltip_fg_color; }
+
+/* ===== notebooks =====
+ * page: 1px light top/left + dark bottom/right; tab: light top/left, dark right, no edge towards the page,
+ * on the active bg when not selected. */
+notebook.frame { border: none; border-radius: 0; }
+notebook > header { background-color: transparent; padding: 0; }
+notebook > header.top    { border-bottom: 1px solid #ffffff; }
+notebook > header.bottom { border-top: 1px solid #8e8ea1; }
+notebook > header.left   { border-right: 1px solid #ffffff; }
+notebook > header.right  { border-left: 1px solid #8e8ea1; }
+notebook > stack { background-color: #D3D3DD; }
+notebook > stack:last-child  { border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-top-width: 0; }
+notebook > stack:first-child { border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-bottom-width: 0; }
+/* a notebook without tabs (single page) gets no frame of its own */
+notebook > stack:only-child { border: none; }
+
+notebook > header > tabs > tab {
+  min-height: 17px; min-width: 16px; padding: 3px 7px;
+  background-color: #C1C1CC; background-image: none;
+  color: @theme_fg_color; border-radius: 0;
+}
+notebook > header > tabs > tab:checked { background-color: #D3D3DD; }
+notebook > header > tabs > tab:disabled { color: @insensitive_fg_color; }
+notebook > header > tabs > tab button { padding: 0; min-width: 14px; min-height: 14px; border-color: transparent; background-image: none; background-color: transparent; box-shadow: none; }
+
+notebook > header.top > tabs > tab { margin: 2px 0 0 0; border: 1px solid; border-color: #ffffff #838393 transparent #ffffff; }
+notebook > header.top > tabs > tab:checked { margin: 0 0 -1px 0; padding: 5px 9px 4px; border-color: #ffffff #8e8ea1 transparent #ffffff; }
+notebook > header.bottom > tabs > tab { margin: 0 0 2px 0; border: 1px solid; border-color: transparent #838393 #838393 #ffffff; }
+notebook > header.bottom > tabs > tab:checked { margin: -1px 0 0 0; padding: 4px 9px 5px; border-color: transparent #8e8ea1 #8e8ea1 #ffffff; }
+notebook > header.left > tabs > tab { margin: 0 0 0 2px; border: 1px solid; border-color: #ffffff transparent #838393 #ffffff; }
+notebook > header.left > tabs > tab:checked { margin: 0 -1px 0 0; padding: 5px 8px; border-color: #ffffff transparent #8e8ea1 #ffffff; }
+notebook > header.right > tabs > tab { margin: 0 2px 0 0; border: 1px solid; border-color: #ffffff #838393 #838393 transparent; }
+notebook > header.right > tabs > tab:checked { margin: 0 0 0 -1px; padding: 5px 8px; border-color: #ffffff #8e8ea1 #8e8ea1 transparent; }
+
+/* ===== frames: the engine's etched frame; paned handles carry five dots ===== */
+frame {
+  border: 1px solid; border-color: #8e8ea1 transparent transparent #8e8ea1; border-radius: 0;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #ffffff, inset -2px -2px 0 #8e8ea1;
+}
+frame > border { border: none; box-shadow: none; }
+frame.flat, .flat.frame { border: none; box-shadow: none; }
+frame > label { padding: 0 2px; color: @theme_fg_color; }
+scrolledwindow > frame { border: none; box-shadow: none; }
+paned > separator {
+  min-width: 5px; min-height: 5px;
+  background-color: transparent; background-image: none;
+  border: none; border-radius: 0;
+}
+paned.vertical > separator { background-image: url("assets/paned-h.png"); background-repeat: no-repeat; background-position: center; }
+paned.horizontal > separator { background-image: url("assets/paned-v.png"); background-repeat: no-repeat; background-position: center; }
+paned > separator.wide { min-width: 5px; min-height: 5px; }
+
+/* ===== lists, trees, text ===== */
+.view, iconview, textview text, textview, treeview.view, listview, columnview, gridview { background-color: @theme_base_color; color: @theme_text_color; }
+.view:disabled, textview text:disabled { background-color: #E5E5F7; color: @insensitive_text_color; }
+.view:selected, iconview:selected, textview text:selected, treeview.view:selected, row:selected { background-color: #808080; background-image: none; color: #ffffff; }
+.view:selected:focus, iconview:selected:focus, textview:focus-within text:selected, textview text:selected:focus,
+treeview.view:selected:focus, row:selected:focus, listview:focus-within row:selected { background-color: #336699; background-image: none; color: #ffffff; }
+treeview.view { border-left-color: #8e8ea1; border-top-color: #8e8ea1; }
+treeview.view.separator { min-height: 2px; color: alpha(black, 0.25); }
+rubberband, .rubberband { background-color: alpha(#336699, 0.3); border: 1px solid #336699; }
+treeview.view.expander, expander arrow { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); background-image: none; color: @theme_text_color; min-width: 16px; min-height: 16px; }
+treeview.view.expander:checked, expander arrow:checked { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+treeview.view.expander:selected { color: #ffffff; }
+treeview.view.progressbar { background-color: #336699; border: none; border-radius: 0; color: #ffffff; }
+treeview.view.trough { background-color: #C1C1CC; border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0; }
+
+/* column headers are ordinary raised buttons */
+treeview.view header button, columnview > header > row > button, columnview header button {
+  min-height: 17px; padding: 2px 4px 2px 7px;
+  border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0;
+  background-color: #D3D3DD; background-image: none; color: @theme_fg_color;
+}
+treeview.view header button:hover, columnview header button:hover { background-color: #E5E5F7; border-color: #ffffff #8686c7 #8686c7 #ffffff; }
+treeview.view header button:active, columnview header button:active { background-color: #C1C1CC; border-color: #838393 #ffffff #ffffff #838393; }
+
+list { background-color: @theme_base_color; color: @theme_text_color; }
+row { padding: 2px; border: none; background-color: transparent; }
+row:disabled { color: @insensitive_text_color; }
+list.separators > row:not(:first-child) { border-top: 1px solid #8e8ea1; }
+
+/* ===== bars ===== */
+.inline-toolbar, actionbar, .toolbar { background-color: #D3D3DD; border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0; padding: 2px; }
+searchbar, searchbar > revealer > box { background-color: #D3D3DD; border-bottom: 1px solid #8e8ea1; }
+infobar, infobar.info, infobar.question, infobar.warning, infobar.error, infobar.other { background-color: #EEE1B3; color: @theme_fg_color; border: 1px solid #8e8ea1; border-radius: 0; }
+infobar.warning { background-color: #f5d9a8; }
+infobar.error { background-color: #e9b5b5; }
+infobar.question { background-color: #D3D3DD; }
+
+headerbar, .titlebar {
+  min-height: 28px; padding: 2px 6px;
+  background-color: #D3D3DD; background-image: none;
+  border: none; border-bottom: 1px solid #8e8ea1; border-radius: 0;
+  color: @theme_fg_color; box-shadow: none;
+}
+headerbar:backdrop { color: #747474; }
+headerbar .title { font-weight: bold; }
+headerbar .subtitle { font-size: smaller; opacity: 0.7; }
+window.csd { border-radius: 0; box-shadow: 0 2px 6px 1px alpha(black, 0.35), 0 0 0 1px #8e8ea1; }
+window.csd.maximized, window.csd.tiled, window.csd.fullscreen, window.csd.solid-csd { border-radius: 0; box-shadow: none; }
+window.csd.popup, window.popup { border-radius: 0; box-shadow: none; }
+
+/* ===== switches, misc ===== */
+switch {
+  min-width: 46px; min-height: 20px;
+  border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0;
+  background-color: #C1C1CC; color: @theme_fg_color;
+}
+switch:checked { background-color: #336699; }
+switch:disabled { background-color: #D3D3DD; color: @insensitive_fg_color; }
+switch slider {
+  min-width: 22px; min-height: 18px; margin: 0;
+  border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0;
+  background-color: #D3D3DD; background-image: none;
+}
+spinner { color: #336699; }
+colorswatch { border: 1px solid #8e8ea1; border-radius: 0; box-shadow: none; }
+calendar { color: @theme_text_color; background-color: @theme_base_color; border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; padding: 2px; }
+calendar > header { border-bottom: 1px solid #8e8ea1; }
+calendar:selected { background-color: #336699; color: #ffffff; border-radius: 0; }
+calendar:indeterminate { color: alpha(currentColor, 0.5); }
+.osd, .osd * { color: #ffffff; }
+.osd { background-color: alpha(#2e2e2e, 0.9); border-radius: 0; }
+.sidebar { background-color: @theme_base_color; border: none; }
+dialog-action-area, .dialog-action-area { padding: 6px; }
+.app-notification { background-color: alpha(#2e2e2e, 0.9); color: #ffffff; border-radius: 0; padding: 6px; }
+
+/* ===== file chooser ===== */
+placessidebar { border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; background-color: @theme_base_color; }
+placessidebar > viewport.frame { border-style: none; }
+placessidebar list { background-color: transparent; }
+placessidebar row { min-height: 24px; padding: 0; }
+placessidebar row > revealer { padding: 0 6px; }
+placessidebar row.sidebar-row .sidebar-icon { margin-right: 7px; }
+placessidebar row.sidebar-row .sidebar-label { padding-right: 4px; }
+placessidebar row.sidebar-row .sidebar-button { padding: 0 2px; min-width: 16px; min-height: 16px; border-color: transparent; background-image: none; background-color: transparent; box-shadow: none; }
+placessidebar row.sidebar-row.sidebar-new-bookmark-row { color: @link_color; }
+placessidebar row.sidebar-placeholder-row { padding: 0 8px; min-height: 2px; background-color: #336699; background-clip: content-box; }
+placessidebar row:selected, placessidebar row:selected label { background-color: #336699; background-image: none; color: #ffffff; }
+placessidebar separator { margin: 3px 0; }
+filechooser #pathbarbox, filechooser box#pathbarbox { background-color: @theme_bg_color; }
+
+/* GTK2 draws the focus ring around the label of a check or radio button only, with a pixel of padding, so the text
+ * sits inside it. Draw it on the label (as a border) instead of on the whole button, where it hugged the text. */
+checkbutton:focus-visible, radiobutton:focus-visible { outline-style: none; }
+checkbutton label, radiobutton label { border: 1px solid transparent; padding: 1px 2px; }
+checkbutton:focus-visible label, radiobutton:focus-visible label { border-color: #000000; }

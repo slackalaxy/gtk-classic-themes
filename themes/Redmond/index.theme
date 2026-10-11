@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Redmond
+Comment=GTK3/GTK4 port of the gtk-engines Redmond (Redmond95) theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Redmond

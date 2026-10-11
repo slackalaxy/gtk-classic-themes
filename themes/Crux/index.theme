@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Crux
+Comment=GTK3/GTK4 port of the gtk-engines Crux theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Crux
