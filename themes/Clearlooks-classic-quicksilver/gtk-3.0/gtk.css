@@ -276,7 +276,7 @@ scrolledwindow.frame > scrollbar.vertical   { margin: -1px -1px -1px -3px; borde
 scrolledwindow.frame > scrollbar.horizontal { margin: -3px -1px -1px -1px; border-top: 1px solid #bababa; padding-top: 3px; }
 
 scrolledwindow { background-color: @theme_bg_color; }
-scrolledwindow.frame, scrolledwindow viewport.frame { border: 1px solid #bababa; border-radius: 0; }
+scrolledwindow.frame, scrolledwindow viewport.frame { border: 0 solid transparent; padding: 1px; box-shadow: inset 0 0 0 1px #bababa; border-radius: 0; }
 scrolledwindow.frame > .view, scrolledwindow.frame > iconview, scrolledwindow.frame > treeview.view { border-width: 0; }
 scrolledwindow > .frame { border: none; }
 scrolledwindow undershoot.top, scrolledwindow undershoot.bottom, scrolledwindow undershoot.left, scrolledwindow undershoot.right { background-image: none; }
@@ -418,7 +418,7 @@ notebook > stack > scrolledwindow viewport.frame, notebook > stack > scrolledwin
 /* A notebook with show-border off (a text editor's tabs, say) has no frame of its own in GTK2, only the scrolled window's,
  * which stops short of the scrollbar. Without this the notebook border ran across the top of the scrollbar. */
 notebook:not(.frame) > stack:only-child { border-width: 0; box-shadow: none; }
-notebook:not(.frame) > stack > scrolledwindow.frame { border: 1px solid #bababa; }
+notebook:not(.frame) > stack > scrolledwindow.frame { border: 0; padding: 1px; box-shadow: inset 0 0 0 1px #bababa; }
 
 notebook > header > tabs > tab {
   min-height: 17px; min-width: 16px; padding: 3px 7px;
@@ -648,3 +648,6 @@ spinbutton button image, headerbar image, .titlebar image, entry image, combobox
 checkbutton:focus, radiobutton:focus { outline-style: none; }
 checkbutton label, radiobutton label { border: 1px dashed transparent; padding: 1px 2px; }
 checkbutton:focus label, radiobutton:focus label { border-color: alpha(currentColor, 0.5); }
+
+/* inside a bordered notebook page the scrolled window has no frame of its own */
+notebook > stack > scrolledwindow.frame, notebook > stack > viewport.frame, notebook > stack > scrolledwindow viewport.frame { padding: 0; box-shadow: none; }

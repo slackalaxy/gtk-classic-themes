@@ -298,7 +298,7 @@ scrollbar.horizontal button.down:disabled { border-width: 1px 1px 1px 0; backgro
 scrollbar.overlay-indicator:not(.hovering):not(.dragging) { opacity: 0.9; }
 
 scrolledwindow { background-color: @theme_bg_color; }
-scrolledwindow.frame, scrolledwindow viewport.frame { border: 1px solid; border-color: #8e8ea1 #ffffff #ffffff #8e8ea1; border-radius: 0; }
+scrolledwindow.frame, scrolledwindow viewport.frame { border: 0 solid transparent; padding: 1px; box-shadow: inset 1px 1px 0 #8e8ea1, inset -1px -1px 0 #ffffff; border-radius: 0; }
 scrolledwindow.frame > .view, scrolledwindow.frame > iconview, scrolledwindow.frame > treeview.view { border-width: 0; }
 scrolledwindow > .frame { border: none; }
 scrolledwindow undershoot.top, scrolledwindow undershoot.bottom, scrolledwindow undershoot.left, scrolledwindow undershoot.right { background-image: none; }
