@@ -557,3 +557,6 @@ checkbutton:focus label, radiobutton:focus label { border-color: #000000; }
 /* GTK2 puts the scrollbar right against the end of the content (scrollbar-spacing 0 in this theme); GTK3's default 3px gap is pulled in. */
 scrolledwindow.frame > scrollbar.vertical   { margin-left: -3px; }
 scrolledwindow.frame > scrollbar.horizontal { margin-top: -3px; }
+
+/* notebooks with no page border (show-border off) draw no page frame in GTK2 */
+notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }

@@ -625,3 +625,6 @@ spinbutton button image, headerbar image, .titlebar image, entry image, combobox
 checkbutton:focus, radiobutton:focus { outline-style: none; }
 checkbutton label, radiobutton label { border: 1px dotted transparent; padding: 1px 2px; }
 checkbutton:focus label, radiobutton:focus label { border-color: #000000; }
+
+/* notebooks with no page border (show-border off) draw no page frame in GTK2 */
+notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }

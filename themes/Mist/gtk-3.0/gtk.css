@@ -550,3 +550,6 @@ checkbutton:focus label, radiobutton:focus label { border-color: #000000; }
 scrolledwindow.frame > scrollbar.vertical   { margin: -1px -1px -1px -3px; padding-left: 3px; border-left: 1px solid #999999; }
 scrolledwindow.frame > scrollbar.horizontal { margin: -3px -1px -1px -1px; padding-top: 3px; border-top: 1px solid #999999; }
 
+
+/* notebooks with no page border (show-border off) draw no page frame in GTK2 */
+notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }

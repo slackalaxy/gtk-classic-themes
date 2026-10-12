@@ -695,3 +695,6 @@ scrolledwindow.frame > scrollbar.horizontal {
   background-image: linear-gradient(to bottom, #696e65 0px, #696e65 1px, #f2f3f1 1px, #f2f3f1 2px, transparent 2px, transparent 5px, #e4e7e2 5px, #e4e7e2 6px, transparent 6px);
   background-size: 100% 6px; background-position: 0 0; background-repeat: no-repeat; background-origin: border-box;
 }
+
+/* notebooks with no page border (show-border off) draw no page frame in GTK2 */
+notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }

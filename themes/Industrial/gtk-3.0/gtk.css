@@ -753,3 +753,6 @@ notebook:not(.frame) > stack > scrolledwindow.frame { border: 0; padding: 1px; b
 
 /* inside a bordered notebook page the scrolled window has no frame of its own */
 notebook > stack > scrolledwindow.frame, notebook > stack > viewport.frame, notebook > stack > scrolledwindow viewport.frame { padding: 0; box-shadow: none; }
+
+/* notebooks with no page border (show-border off) draw no page frame in GTK2 */
+notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
