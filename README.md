@@ -1,24 +1,26 @@
 # gtk-classic-themes
-![AI generated](https://img.shields.io/badge/AI-generated-D97757?logo=claude&logoColor=white&labelColor=3b3b4f)
+[![AI generated](https://img.shields.io/badge/AI-generated-D97757?logo=claude&logoColor=white&labelColor=3b3b4f)](https://en.wikipedia.org/wiki/AI_slop)
 
-GTK3 and GTK4 ports of the classic GTK2 themes from [gtk-engines](https://download.gnome.org/sources/gtk-engines/2.20/) (2.20.2) and [clearlooks](https://sourceforge.net/projects/clearlooks/files/clearlooks/clearlooks%200.6.2/) (0.6.2). **Porting was done entirely by Claude, by Anthropic.** So, don't credit me, credit their Pro plan. 
+GTK3 and GTK4 ports of the classic GTK2 themes from [gtk-engines](https://download.gnome.org/sources/gtk-engines/2.20/) (2.20.2) and [clearlooks](https://sourceforge.net/projects/clearlooks/files/clearlooks/clearlooks%200.6.2/) (0.6.2). Colours and geometry come from the engine source and from measurements of real GTK2 renderings.
 
-> I would very much appreciate it if someone with theming experience steps in.
+**Porting was done entirely by Claude, by Anthropic.** So, don't credit me, credit their Pro plan. 
 
-Colours and geometry come from the engine source and from measurements of real GTK2 renderings. Included themes:
+Joke aside, that's not the type of AI slop where I simply asked the LLM to translate and then I push online. I did (and I am still doing) extensive testing, in order to have various discrepancies fixed. I will very much appreciate any feedback, and if someone with theming experience steps in, that would be great.
+
+Included themes:
 
 | Folder (in `themes/`) | Based on | GTK2 | GTK3 | GTK4 |
 |---|---|---|---|---|
-| Clearlooks | gtk-engines 2.20.2 Clearlooks | original | port | port |
-| Clearlooks-classic | clearlooks-0.6.2 Clearlooks | original | port | port |
-| Clearlooks-classic-deepsky | clearlooks-0.6.2 DeepSky | original | port | port |
-| Clearlooks-classic-olive | clearlooks-0.6.2 Olive | original | port | port |
-| Clearlooks-classic-quicksilver | clearlooks-0.6.2 Quicksilver | original | port | port |
-| Industrial | gtk-engines 2.20.2 Industrial | original | port | port |
-| Redmond | gtk-engines 2.20.2 Redmond | original | port | port |
-| Mist | gtk-engines 2.20.2 Mist | original | port | port |
-| ThinIce | gtk-engines 2.20.2 ThinIce | original | port | port |
-| Crux | gtk-engines 2.20.2 Crux | original | port | port |
+| Clearlooks | gtk-engines 2.20.2 Clearlooks | original | ported | ported |
+| Clearlooks-classic | clearlooks-0.6.2 Clearlooks | original | ported | ported |
+| Clearlooks-classic-deepsky | clearlooks-0.6.2 DeepSky | original | ported | ported |
+| Clearlooks-classic-olive | clearlooks-0.6.2 Olive | original | ported | ported |
+| Clearlooks-classic-quicksilver | clearlooks-0.6.2 Quicksilver | original | ported | ported |
+| Crux | gtk-engines 2.20.2 Crux | original | ported | ported |
+| Industrial | gtk-engines 2.20.2 Industrial | original | ported | ported |
+| Mist | gtk-engines 2.20.2 Mist | original | ported | ported |
+| Redmond | gtk-engines 2.20.2 Redmond | original | ported | ported |
+| ThinIce | gtk-engines 2.20.2 ThinIce | original | ported | ported |
 
 ## Screenshots (GTK3)
 
