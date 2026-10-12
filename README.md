@@ -1,24 +1,24 @@
 # gtk-classic-themes
 ![AI generated](https://img.shields.io/badge/AI-generated-D97757?logo=claude&logoColor=white&labelColor=3b3b4f)
 
-GTK3 and GTK4 ports of the classic GTK2 themes and engines from the gtk-engines packages (and clearlooks 0.6.2). **Porting was done entirely by Claude, by Anthropic.** So, don't credit me, credit their Pro plan. 
+GTK3 and GTK4 ports of the classic GTK2 themes from [gtk-engines](https://download.gnome.org/sources/gtk-engines/2.20/) (2.20.2) and [clearlooks](https://sourceforge.net/projects/clearlooks/files/clearlooks/clearlooks%200.6.2/) (0.6.2). **Porting was done entirely by Claude, by Anthropic.** So, don't credit me, credit their Pro plan. 
 
 > I would very much appreciate it if someone with theming experience steps in.
 
-Colours and geometry come from the engine source and from measurements of real GTK2 renderings.
+Colours and geometry come from the engine source and from measurements of real GTK2 renderings. Included themes:
 
 | Folder (in `themes/`) | Based on | GTK2 | GTK3 | GTK4 |
 |---|---|---|---|---|
-| Clearlooks | gtk-engines 2.20.2 Clearlooks (Gummy) | original gtkrc | yes | yes |
-| Clearlooks-classic | clearlooks-0.6.2 Clearlooks | original gtkrc | yes | yes |
-| Clearlooks-classic-deepsky | clearlooks-0.6.2 DeepSky | original gtkrc | yes | yes |
-| Clearlooks-classic-olive | clearlooks-0.6.2 Olive | original gtkrc | yes | yes |
-| Clearlooks-classic-quicksilver | clearlooks-0.6.2 Quicksilver | original gtkrc | yes | yes |
-| Industrial | gtk-engines 2.20.2 Industrial | original gtkrc | yes | yes |
-| Redmond | gtk-engines 2.20.2 Redmond | original gtkrc | yes | yes |
-| Mist | gtk-engines 2.20.2 Mist | original gtkrc | yes | yes |
-| ThinIce | gtk-engines 2.20.2 ThinIce | original gtkrc | yes | yes |
-| Crux | gtk-engines 2.20.2 Crux | original gtkrc | yes | yes |
+| Clearlooks | gtk-engines 2.20.2 Clearlooks | original | port | port |
+| Clearlooks-classic | clearlooks-0.6.2 Clearlooks | original | port | port |
+| Clearlooks-classic-deepsky | clearlooks-0.6.2 DeepSky | original | port | port |
+| Clearlooks-classic-olive | clearlooks-0.6.2 Olive | original | port | port |
+| Clearlooks-classic-quicksilver | clearlooks-0.6.2 Quicksilver | original | port | port |
+| Industrial | gtk-engines 2.20.2 Industrial | original | port | port |
+| Redmond | gtk-engines 2.20.2 Redmond | original | port | port |
+| Mist | gtk-engines 2.20.2 Mist | original | port | port |
+| ThinIce | gtk-engines 2.20.2 ThinIce | original | port | port |
+| Crux | gtk-engines 2.20.2 Crux | original | port | port |
 
 ## Screenshots (GTK3)
 
