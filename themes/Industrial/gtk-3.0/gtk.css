@@ -161,6 +161,12 @@ button.flat:active, button.flat:checked, toolbar button:active, toolbar button:c
 }
 button.flat:disabled, toolbar button:disabled { background-color: transparent; border-color: transparent; }
 
+/* combo boxes keep their frame in toolbars (only the tool buttons are flat) */
+toolbar combobox button.combo { background-color: #f6f6f6; border-color: #999999; box-shadow: inset -1px -1px 3px alpha(black, 0.10); }
+toolbar combobox button.combo:hover { background-color: #ffffff; border-color: #9e9e9e; box-shadow: inset -1px -1px 3px alpha(black, 0.10); }
+toolbar combobox button.combo:active, toolbar combobox button.combo:checked { background-color: #d1d1d1; border-color: #828282; box-shadow: inset 1px 1px 2px alpha(black, 0.27), inset 2px 2px 3px alpha(black, 0.10); }
+toolbar combobox button.combo:disabled { background-color: @insensitive_bg_color; border-color: #b1b1b1; }
+
 button.text-button { padding: 2px 8px; }
 button.circular { border-radius: 100px; }
 

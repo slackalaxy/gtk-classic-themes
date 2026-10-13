@@ -107,6 +107,12 @@ button.flat:active, button.flat:checked, headerbar button:active, headerbar butt
 }
 button.flat:disabled, .toolbar button:disabled { background-image: none; background-color: transparent; border-color: transparent; }
 
+/* dropdowns and combo boxes keep their frame in toolbars (only the tool buttons are flat) */
+.toolbar dropdown > button, .toolbar combobox button.combo { background-image: none; background-color: #D3D3DD; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; box-shadow: none; }
+.toolbar dropdown > button:hover, .toolbar combobox button.combo:hover { background-color: #E5E5F7; border-color: #ffffff #8686c7 #8686c7 #ffffff; }
+.toolbar dropdown > button:active, .toolbar combobox button.combo:active, .toolbar dropdown > button:checked, .toolbar combobox button.combo:checked { background-color: #C1C1CC; border-color: #838393 #ffffff #ffffff #838393; }
+.toolbar dropdown > button:disabled, .toolbar combobox button.combo:disabled { background-image: none; background-color: #D3D3DD; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; }
+
 /* linked buttons */
 .linked:not(.vertical) > button:not(:first-child),
 .linked:not(.vertical) > menubutton:not(:first-child) > button,

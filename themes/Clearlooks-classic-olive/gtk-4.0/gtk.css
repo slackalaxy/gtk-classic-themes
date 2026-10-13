@@ -126,6 +126,12 @@ button.flat:active, button.flat:checked, headerbar button:active, headerbar butt
 }
 button.flat:disabled, .toolbar button:disabled { background-image: none; background-color: transparent; border-color: transparent; box-shadow: none; }
 
+/* dropdowns and combo boxes keep their frame in toolbars (only the tool buttons are flat) */
+.toolbar dropdown > button, .toolbar combobox button.combo { background-image: linear-gradient(to bottom, #f5f3e9 0%, #edeada 25%, #e9e6d2 75%, #ded9be 100%); background-color: #ece9d8; border-color: #857f5d; box-shadow: inset 1px 1px 0 #f6f5ec, inset -1px -1px 0 #e1ddc4, 0 -1px 0 0 #e1ddc4, 0 1px 0 0 #f5f3e9; }
+.toolbar dropdown > button:hover, .toolbar combobox button.combo:hover { background-color: #f1efe3; background-image: linear-gradient(to bottom, #faf9f4 0%, #f2f0e5 25%, #eeecdd 75%, #e2dec8 100%); border-color: #857f5d; border-bottom-color: #a59d74; border-right-color: #a59d74; box-shadow: inset 1px 1px 0 #f6f5ec, inset -1px -1px 0 #e1ddc4; }
+.toolbar dropdown > button:active, .toolbar combobox button.combo:active, .toolbar dropdown > button:checked, .toolbar combobox button.combo:checked { background-color: #cdc7b0; background-image: linear-gradient(to bottom, #cdc7b0, #c2bba1); border-color: #6a6554; border-bottom-color: #76705c; border-right-color: #76705c; box-shadow: inset 1px 1px 0 #c3bd98; }
+.toolbar dropdown > button:disabled, .toolbar combobox button.combo:disabled { background-image: linear-gradient(to bottom, #f5f3e9 0%, #edeada 25%, #e9e6d2 75%, #ded9be 100%); background-color: #ece9d8; border-color: #c3bd98; box-shadow: inset 1px 1px 0 #f6f5ec, inset -1px -1px 0 #e1ddc4, 0 -1px 0 0 #e1ddc4, 0 1px 0 0 #f5f3e9; }
+
 /* linked buttons */
 .linked:not(.vertical) > button:not(:first-child),
 .linked:not(.vertical) > menubutton:not(:first-child) > button,

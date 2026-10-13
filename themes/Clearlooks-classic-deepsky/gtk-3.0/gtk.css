@@ -131,6 +131,12 @@ button.flat:active, button.flat:checked, toolbar button:active, toolbar button:c
 }
 button.flat:disabled, toolbar button:disabled { background-image: none; background-color: transparent; border-color: transparent; box-shadow: none; }
 
+/* combo boxes keep their frame in toolbars (only the tool buttons are flat) */
+toolbar combobox button.combo { background-image: linear-gradient(to bottom, #fcfcfb 0%, #f2f1ed 25%, #edebe6 75%, #dfdbd3 100%); background-color: #f1efeb; border-color: #827a6c; box-shadow: inset 1px 1px 0 #fefefe, inset -1px -1px 0 #e3e0d8, 0 -1px 0 0 #e3e0d8, 0 1px 0 0 #fcfcfb; }
+toolbar combobox button.combo:hover { background-color: #f9f7f3; background-image: linear-gradient(to bottom, #ffffff 0%, #faf9f5 25%, #f6f3ed 75%, #eae3d7 100%); border-color: #827a6c; border-bottom-color: #9f9888; border-right-color: #9f9888; box-shadow: inset 1px 1px 0 #fefefe, inset -1px -1px 0 #e3e0d8; }
+toolbar combobox button.combo:active, toolbar combobox button.combo:checked { background-color: #d7d3ca; background-image: linear-gradient(to bottom, #d7d3ca, #cac5ba); border-color: #6f6b61; border-bottom-color: #7b766a; border-right-color: #7b766a; box-shadow: inset 1px 1px 0 #c1baad; }
+toolbar combobox button.combo:disabled { background-image: linear-gradient(to bottom, #faf8f7 0%, #f0ede9 25%, #ece7e2 75%, #ded6cf 100%); background-color: #efebe7; border-color: #c1baad; box-shadow: inset 1px 1px 0 #fefefe, inset -1px -1px 0 #e3e0d8, 0 -1px 0 0 #e3e0d8, 0 1px 0 0 #fcfcfb; }
+
 /* linked buttons */
 .linked:not(.vertical) > button:not(:first-child),
 .linked:not(.vertical) > combobox:not(:first-child) > box > button.combo { border-top-left-radius: 0; border-bottom-left-radius: 0; border-left-width: 0; }
