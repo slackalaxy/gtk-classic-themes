@@ -85,8 +85,7 @@ button {
   border: 1px solid; border-radius: 3px;
   color: @theme_fg_color;
   outline-style: none;
-}
-button { border-color: rgba(0,0,0,0.1); background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf, inset 0 0 0 1px #4e5647; }
+  border-color: rgba(0,0,0,0.1); background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf, inset 0 0 0 1px #4e5647;}
 button:hover { border-color: rgba(0,0,0,0.1); background-color: #d7dbd4; background-image: linear-gradient(to bottom, #f5f6f4 0%, #f5f6f4 14%, #b9c0b3 86%, #b9c0b3 100%); box-shadow: inset 2px 0 0 0 #e1e4de, inset -2px 0 0 0 #e1e4de, inset 0 2px 0 0 #fafafa, inset 0 -2px 0 0 #c8cdc3, inset 0 0 0 1px #535a4b; }
 button:active,
 button:checked,
@@ -226,8 +225,7 @@ spinbutton:not(.vertical) entry { border: none; border-image: none; box-shadow: 
 spinbutton:not(.vertical) button {
   min-width: 11px; padding: 0 1px; margin: 2px 1px 2px 0;
   border: 1px solid; border-radius: 2px;
-}
-spinbutton:not(.vertical) button { border-color: #4e5647; background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf; }
+  border-color: #4e5647; background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf;}
 spinbutton:not(.vertical) button:hover { border-color: #4e5647; background-color: #d7dbd4; background-image: linear-gradient(to bottom, #f5f6f4 0%, #f5f6f4 14%, #b9c0b3 86%, #b9c0b3 100%); box-shadow: inset 2px 0 0 0 #e1e4de, inset -2px 0 0 0 #e1e4de, inset 0 2px 0 0 #fafafa, inset 0 -2px 0 0 #c8cdc3; }
 spinbutton:not(.vertical) button:active,
 spinbutton:not(.vertical) button:checked,
@@ -540,10 +538,7 @@ treeview.view header button, treeview header button, columnview header button {
   min-height: 17px; padding: 2px 4px 2px 7px;
   border: 1px solid; border-radius: 3px;
   color: @theme_fg_color;
-}
-treeview.view header button,
-treeview header button,
-columnview header button { border-color: #ffffff; background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf, inset 0 0 0 1px #4e5647; }
+  border-color: #ffffff; background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf, inset 0 0 0 1px #4e5647;}
 treeview.view header button:hover,
 treeview header button:hover,
 columnview header button:hover { border-color: #ffffff; background-color: #d7dbd4; background-image: linear-gradient(to bottom, #f5f6f4 0%, #f5f6f4 14%, #b9c0b3 86%, #b9c0b3 100%); box-shadow: inset 2px 0 0 0 #e1e4de, inset -2px 0 0 0 #e1e4de, inset 0 2px 0 0 #fafafa, inset 0 -2px 0 0 #c8cdc3, inset 0 0 0 1px #535a4b; }
@@ -676,6 +671,10 @@ placessidebar row image, placessidebar row .sidebar-icon,
 XfcePanelWindow image, #XfcePanelWindow image, .xfce4-panel .tray image, .xfce4-panel .systray image { -gtk-icon-style: regular; }
 spinbutton button image, headerbar image, .titlebar image, entry image, combobox arrow, scale image { -gtk-icon-style: requested; }
 
+/* ===== GTK2 fidelity fixes =====
+ * Everything from here on overrides the widget sections above (same specificity, later rule wins),
+ * so the order matters: keep these after the widget sections. */
+
 /* GTK2 draws the focus ring around the label of a check or radio button only, with a pixel of padding, so the text
  * sits inside it. Draw it on the label (as a border) instead of on the whole button, where it hugged the text. */
 checkbutton:focus, radiobutton:focus { outline-style: none; }
@@ -700,6 +699,10 @@ scrolledwindow.frame > scrollbar.horizontal {
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
 
 
+/* ===== applications =====
+ * Rules for one specific application, scoped by the class the application puts on its window
+ * (.thunar), so they cannot touch other applications. Add other applications here the same way. */
+
 /* Thunar path bar: segmented buttons like GTK2 (undo the flat toolbar-button look) */
 .thunar .path-bar button {
   min-height: 17px; min-width: 16px;
@@ -707,7 +710,6 @@ notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
   border: 1px solid; border-radius: 3px;
   color: @theme_fg_color;
   outline-style: none;
-}
-.thunar .path-bar button { border-color: rgba(0,0,0,0.1); background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf, inset 0 0 0 1px #4e5647; }
+  border-color: rgba(0,0,0,0.1); background-color: #d3d7cf; background-image: linear-gradient(to bottom, #f1f2f0 0%, #f1f2f0 14%, #b5bcae 86%, #b5bcae 100%); box-shadow: inset 2px 0 0 0 #dde0da, inset -2px 0 0 0 #dde0da, inset 0 2px 0 0 #f6f7f5, inset 0 -2px 0 0 #c4c9bf, inset 0 0 0 1px #4e5647;}
 .thunar .path-bar button:hover { border-color: rgba(0,0,0,0.1); background-color: #d7dbd4; background-image: linear-gradient(to bottom, #f5f6f4 0%, #f5f6f4 14%, #b9c0b3 86%, #b9c0b3 100%); box-shadow: inset 2px 0 0 0 #e1e4de, inset -2px 0 0 0 #e1e4de, inset 0 2px 0 0 #fafafa, inset 0 -2px 0 0 #c8cdc3, inset 0 0 0 1px #535a4b; }
 .thunar .path-bar button:active, .thunar .path-bar button:checked, .thunar .path-bar button:hover:active, .thunar .path-bar button:hover:checked { border-color: rgba(0,0,0,0.1); background-color: #bec3b9; background-image: linear-gradient(to bottom, #b1b8ab 0%, #b1b8ab 30%, #8b9481 90%, #8b9481 100%); box-shadow: inset -2px 0 0 0 rgba(0,0,0,0.03), inset 3px 3px 0 0 rgba(0,0,0,0.05), inset 2px 2px 0 0 rgba(0,0,0,0.2), inset 0 0 0 1px #393e35; }

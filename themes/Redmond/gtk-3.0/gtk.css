@@ -548,6 +548,10 @@ placessidebar row image, placessidebar row .sidebar-icon,
 XfcePanelWindow image, #XfcePanelWindow image, .xfce4-panel .tray image, .xfce4-panel .systray image { -gtk-icon-style: regular; }
 spinbutton button image, headerbar image, .titlebar image, entry image, combobox arrow, scale image { -gtk-icon-style: requested; }
 
+/* ===== GTK2 fidelity fixes =====
+ * Everything from here on overrides the widget sections above (same specificity, later rule wins),
+ * so the order matters: keep these after the widget sections. */
+
 /* GTK2 draws the focus ring around the label of a check or radio button only, with a pixel of padding, so the text
  * sits inside it. Draw it on the label (as a border) instead of on the whole button, where it hugged the text. */
 checkbutton:focus, radiobutton:focus { outline-style: none; }
@@ -561,6 +565,10 @@ scrolledwindow.frame > scrollbar.horizontal { margin-top: -3px; }
 /* notebooks with no page border (show-border off) draw no page frame in GTK2 */
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
 
+
+/* ===== applications =====
+ * Rules for one specific application, scoped by the class the application puts on its window
+ * (.thunar), so they cannot touch other applications. Add other applications here the same way. */
 
 /* Thunar path bar: segmented buttons like GTK2 (undo the flat toolbar-button look) */
 .thunar .path-bar button {

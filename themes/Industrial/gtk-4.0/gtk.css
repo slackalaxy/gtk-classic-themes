@@ -569,6 +569,10 @@ placessidebar row:selected:backdrop, placessidebar row:selected:backdrop label {
 placessidebar separator { background-color: #999999; margin: 3px 0; }
 filechooser #pathbarbox, filechooser box#pathbarbox { background-color: @theme_bg_color; }
 
+/* ===== GTK2 fidelity fixes =====
+ * Everything from here on overrides the widget sections above (same specificity, later rule wins),
+ * so the order matters: keep these after the widget sections. */
+
 /* GTK adds a "frame" class to notebooks; the generic frame border would wrap the tab strip too.
  * Draw the page frame on the content area only (tabs sit on its top/bottom edge). */
 notebook.frame { border: none; border-radius: 0; }

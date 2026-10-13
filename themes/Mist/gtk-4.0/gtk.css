@@ -452,6 +452,10 @@ placessidebar row:selected, placessidebar row:selected label { background-color:
 placessidebar separator { margin: 3px 0; }
 filechooser #pathbarbox, filechooser box#pathbarbox { background-color: @theme_bg_color; }
 
+/* ===== GTK2 fidelity fixes =====
+ * Everything from here on overrides the widget sections above (same specificity, later rule wins),
+ * so the order matters: keep these after the widget sections. */
+
 /* GTK2 draws the focus ring around the label of a check or radio button only, with a pixel of padding, so the text
  * sits inside it. Draw it on the label (as a border) instead of on the whole button, where it hugged the text. */
 checkbutton:focus-visible, radiobutton:focus-visible { outline-style: none; }
