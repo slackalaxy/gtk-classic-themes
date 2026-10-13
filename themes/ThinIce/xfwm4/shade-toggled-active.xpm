@@ -1,0 +1,25 @@
+/* XPM */
+static char * shade_toggled_active[] = {
+"16 16 5 2",
+"aa c None",
+"ab c #ffffff",
+"ac c #6a6a80",
+"ad c #d3d3dd",
+"ae c #000000",
+"aaaaaaababababababababababababac",
+"aaaaabadadadadadadadadadadadadac",
+"aaabadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadaeaeaeaeaeaeaeaeadadadac",
+"abadadadaeaeaeaeaeaeaeaeadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadaeaeadadadadadadac",
+"abadadadadadaeaeaeaeadadadadadac",
+"abadadadadaeaeaeaeaeaeadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadacaa",
+"abadadadadadadadadadadadadacaaaa",
+"acacacacacacacacacacacacacaaaaaa"
+};

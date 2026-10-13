@@ -1,0 +1,25 @@
+/* XPM */
+static char * shade_active[] = {
+"17 17 4 1",
+"a c #6484a4 s active_color_1",
+"b c #9cb6cc s active_hilight_1",
+"w c #ffffff s active_hilight_2",
+"n c None",
+"bbbbbbbbbbbbbbbbb",
+"baaaaaaaaaaaaaaab",
+"baaaaaaaaaaaaaaab",
+"baaaaaaaaaaaaaaab",
+"baaawwwwwwwwwaaab",
+"baaawwwwwwwwwaaab",
+"baaaaaaaaaaaaaaab",
+"baaaaaaaaaaaaaaab",
+"baaaaaaawaaaaaaab",
+"baaaaaawwwaaaaaab",
+"baaaaawwwwwaaaaab",
+"baaaawwwwwwwaaaab",
+"baaaaaaaaaaaaaaab",
+"baaaaaaaaaaaaaaab",
+"baaaaaaaaaaaaaaab",
+"baaaaaaaaaaaaaaab",
+"bbbbbbbbbbbbbbbbb"
+};

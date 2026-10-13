@@ -1,0 +1,24 @@
+/* XPM */
+static char * close_pressed[] = {
+"16 16 4 2",
+"aa c #777777",
+"ab c #ffffff",
+"ac c #d3d3d3",
+"ad c #000000",
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacadadacacacacadadacacab",
+"aaacacacacacadadacacadadacacacab",
+"aaacacacacacacadadadadacacacacab",
+"aaacacacacacacacadadacacacacacab",
+"aaacacacacacacadadadadacacacacab",
+"aaacacacacacadadacacadadacacacab",
+"aaacacacacadadacacacacadadacacab",
+"aaacacacacadacacacacacacadacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"abababababababababababababababab"
+};

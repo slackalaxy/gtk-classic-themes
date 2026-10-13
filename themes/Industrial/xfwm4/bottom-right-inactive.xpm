@@ -1,0 +1,23 @@
+/* XPM */
+static char * bottom_right_inactive[] = {
+"15 15 4 2",
+"aa c None",
+"ab c #f6f6f6 s inactive_color_2",
+"ac c #999999",
+"ad c #7b7b7b",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"aaaaaaaaaaaaaaaaaaaaaaababacad",
+"ababababababababababababacadaa",
+"abababababababababababacadaaaa",
+"acacacacacacacacacacacadaaaaaa",
+"adadadadadadadadadadadaaaaaaaa"
+};

@@ -1,0 +1,25 @@
+/* XPM */
+static char * close_inactive[] = {
+"17 17 4 2",
+"aa c #d1d1d1 s inactive_color_1",
+"ab c #c2c2c2",
+"ac c #f6f6f6 s inactive_color_2",
+"ad c #a5a5a5",
+"aaabababababababababababababababaa",
+"abacacacacacacacacacacacacacacacab",
+"abacacacacacacacacacacacacacacacab",
+"abacacadadacacacacacacacadadacacab",
+"abacacadadadacacacacacadadadacacab",
+"abacacacadadadacacacadadadacacacab",
+"abacacacacadadadacadadadacacacacab",
+"abacacacacacadadadadadacacacacacab",
+"abacacacacacacadadadacacacacacacab",
+"abacacacacacadadadadadacacacacacab",
+"abacacacacadadadacadadadacacacacab",
+"abacacacadadadacacacadadadacacacab",
+"abacacadadadacacacacacadadadacacab",
+"abacacadadacacacacacacacadadacacab",
+"abacacacacacacacacacacacacacacacab",
+"abacacacacacacacacacacacacacacacab",
+"aaabababababababababababababababaa"
+};

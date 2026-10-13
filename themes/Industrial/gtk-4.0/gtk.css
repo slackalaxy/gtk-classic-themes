@@ -260,7 +260,7 @@ scrollbar slider:active { background-color: #d1d1d1; border-color: #828282; }
 scrollbar slider:disabled { background-color: @insensitive_bg_color; border-color: #a5a5a5; background-image: none; }
 scrolledwindow.frame { border: 1px solid #999999; border-radius: 0; }
 scrolledwindow undershoot.top, scrolledwindow undershoot.bottom, scrolledwindow undershoot.left, scrolledwindow undershoot.right { background-image: none; }
-scrolledwindow junction { background-color: #d1d1d1; border: 1px solid #a5a5a5; border-width: 1px 0 0 1px; }
+scrolledwindow junction { background-color: #f6f6f6; border: none; }
 
 /* ---- scales: padding keeps the handle's half-length overhang inside the widget ---- */
 scale trough {
@@ -586,3 +586,8 @@ checkbutton:focus-visible label, radiobutton:focus-visible label { border-color:
 
 /* notebooks with no page border (show-border off) draw no page frame in GTK2 */
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
+
+/* file chooser path bar: taller buttons, closer to GTK2 */
+pathbar button, pathbar button.text-button, pathbar button.image-button, .path-bar button {
+  padding-top: 6px; padding-bottom: 7px;
+}

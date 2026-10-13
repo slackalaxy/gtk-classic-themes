@@ -1,0 +1,11 @@
+/* XPM */
+static char * left_inactive[] = {
+"4 4 3 2",
+"aa c #87847e",
+"ab c #f8f7f3",
+"ac c #f1efeb",
+"aaabacac",
+"aaabacac",
+"aaabacac",
+"aaabacac"
+};

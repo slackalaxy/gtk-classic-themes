@@ -1,0 +1,23 @@
+/* XPM */
+static char * menu_inactive[] = {
+"16 16 3 2",
+"aa c #ffffff",
+"ab c #777777",
+"ac c #eaeaea",
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacababababababababacacacab",
+"aaacacacacababababababacacacacab",
+"aaacacacacacababababacacacacacab",
+"aaacacacacacacababacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"abababababababababababababababab"
+};

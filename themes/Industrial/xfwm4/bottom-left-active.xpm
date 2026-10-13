@@ -1,0 +1,27 @@
+/* XPM */
+static char * bottom_left_active[] = {
+"15 15 8 2",
+"aa c #3f566d s active_shadow_1",
+"ab c #b5c5d5 s active_hilight_1",
+"ac c #9cb6cc s active_color_1",
+"ad c None",
+"ae c #9db6cc s active_color_1",
+"af c #5d7c9a s active_color_1",
+"ag c #7797b5 s active_color_1",
+"ah c #6484a4 s active_color_1",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"aaabacaaadadadadadadadadadadad",
+"adaaacafaaaaaaaaaaaaaaaaaaaaaa",
+"adaaacacacacacacacacacacacacac",
+"adadaaaaahahahahahahahahahahah",
+"adadadadaaaaaaaaaaaaaaaaaaaaaa"
+};

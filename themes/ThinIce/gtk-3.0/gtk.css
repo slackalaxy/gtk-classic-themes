@@ -628,3 +628,8 @@ checkbutton:focus label, radiobutton:focus label { border-color: #000000; }
 
 /* notebooks with no page border (show-border off) draw no page frame in GTK2 */
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
+
+/* file chooser path bar: taller buttons, closer to GTK2 */
+pathbar button, pathbar button.text-button, pathbar button.image-button, .path-bar button {
+  padding-top: 7px; padding-bottom: 8px;
+}

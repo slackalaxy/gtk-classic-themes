@@ -1,0 +1,11 @@
+Clearlooks XFWM4 Theme
+----------------------
+Based on Clearlooks Metacity from Fedora 14.
+
+Author: Casey Kirsle
+Date: Jan  4 2011
+
+http://www.kirsle.net/
+
+Modified: recoloured to match the Clearlooks GTK theme (title bar colour and frame colour). The shapes are unchanged from the original.
+The shade and stick buttons (normal, toggled, pressed, inactive) were added in the same style.

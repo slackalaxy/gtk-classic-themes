@@ -283,7 +283,7 @@ scrolledwindow.frame, scrolledwindow viewport.frame { border: 0 solid transparen
 scrolledwindow.frame > .view, scrolledwindow.frame > iconview, scrolledwindow.frame > treeview.view { border-width: 0; }
 scrolledwindow > .frame { border: none; }
 scrolledwindow undershoot.top, scrolledwindow undershoot.bottom, scrolledwindow undershoot.left, scrolledwindow undershoot.right { background-image: none; }
-scrolledwindow junction { background-color: #d6d3d1; border: 1px solid #a09d9a; border-width: 1px 0 0 1px; }
+scrolledwindow junction { background-color: #edeceb; border: none; }
 
 /* ===== scales =====
  * trough like the scrollbar trough, filled part in the spot colours, slider = button with 3x3 grip dots. */
@@ -653,3 +653,8 @@ notebook > stack > scrolledwindow.frame, notebook > stack > viewport.frame, note
 
 /* notebooks with no page border (show-border off) draw no page frame in GTK2 */
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
+
+/* file chooser path bar: taller buttons, closer to GTK2 */
+pathbar button, pathbar button.text-button, pathbar button.image-button, .path-bar button {
+  padding-top: 6px; padding-bottom: 7px;
+}

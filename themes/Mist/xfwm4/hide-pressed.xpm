@@ -1,0 +1,24 @@
+/* XPM */
+static char * hide_pressed[] = {
+"16 16 4 2",
+"aa c #777777",
+"ab c #ffffff",
+"ac c #d3d3d3",
+"ad c #000000",
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacadadadadadadacacacacab",
+"aaacacacacadadadadadadacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"aaacacacacacacacacacacacacacacab",
+"abababababababababababababababab"
+};

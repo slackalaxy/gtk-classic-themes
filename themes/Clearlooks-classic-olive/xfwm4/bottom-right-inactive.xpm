@@ -1,0 +1,11 @@
+/* XPM */
+static char * bottom_right_inactive[] = {
+"4 4 3 2",
+"aa c #ece9d8",
+"ab c #d1cdbd",
+"ac c #848074",
+"aaaaabac",
+"aaaaabac",
+"abababac",
+"acacacac"
+};

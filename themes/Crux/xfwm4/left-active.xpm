@@ -1,0 +1,18 @@
+/* XPM */
+static char * left_active[] = {
+"5 10 4 2",
+"aa c #000000",
+"ab c #a48fa7",
+"ac c #75507b",
+"ad c #563859",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa",
+"aaabacadaa"
+};

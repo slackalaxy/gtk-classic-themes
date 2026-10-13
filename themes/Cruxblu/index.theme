@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Cruxblu
+Comment=GTK3/GTK4 port of the gtk-engines Crux theme, in the blue of the Xfwm4 Crux theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Cruxblu

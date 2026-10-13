@@ -1,0 +1,24 @@
+/* XPM */
+static char * stick_toggled_inactive[] = {
+"16 16 4 2",
+"aa c None",
+"ab c #ffffff",
+"ac c #6a6a80",
+"ad c #d3d3dd",
+"aaaaaaababababababababababababac",
+"aaaaabadadadadadadadadadadadadac",
+"aaabadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadacacacacacacadadadadac",
+"abadadadadacadadadadacadadadadac",
+"abadadadadacadacacadacadadadadac",
+"abadadadadacadacacadacadadadadac",
+"abadadadadacadadadadacadadadadac",
+"abadadadadacacacacacacadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadacaa",
+"abadadadadadadadadadadadadacaaaa",
+"acacacacacacacacacacacacacaaaaaa"
+};

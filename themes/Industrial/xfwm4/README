@@ -1,0 +1,14 @@
+Industrial Xfwm4 theme, version 0.2
+
+Industrial xfwm4 theme, recoloured to match the Industrial GTK3/GTK4 theme colour scheme.
+Original artwork: Ximian Desktop 2 default window decoration, ported by Ercin EKER "caldera". GNU/GPL.
+
+Colours: the title bar, frame and button colours are symbolic (active_color_1, active_hilight_1, active_shadow_1, ...), so Xfwm4
+takes them from the GTK theme in use instead of using fixed values. Title text colours are not set in themerc, so they follow
+the GTK theme as well. The shapes are unchanged from the original; the former smooth title gradient is now a flat base
+colour with a highlight line on top and a dark line below, which is all the symbolic colours allow.
+
+Buttons: the button faces are a flat base-colour body with a highlight edge (darker when pressed), so they follow the colour scheme.
+Stripes: the horizontal lines of the original title bar are kept as thin rows of the highlight colour on every second row.
+Side frame: the side strips use the highlight colour, as the lighter side frame of the original does.
+Frame width: the side and bottom frame is one pixel thinner than the original (4 pixels instead of 5).

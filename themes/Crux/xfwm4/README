@@ -1,0 +1,7 @@
+Crux Xfwm4 theme, version 0.1
+
+A recolour of the old xfwm4-themes "crux" theme (itself a port of the Sawfish
+theme of the same name, credit to its original authors) to match the GTK Crux
+colours: purple selection (#75507b) and grey-green background (#d3d7cf).
+Added maximize-toggled, shade-toggled and stick-toggled buttons.
+Colours are fixed; they do not follow the GTK theme.

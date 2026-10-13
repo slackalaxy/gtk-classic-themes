@@ -1,0 +1,25 @@
+/* XPM */
+static char * stick_toggled_pressed[] = {
+"16 16 5 2",
+"aa c None",
+"ab c #6a6a80",
+"ac c #ffffff",
+"ad c #c1c1cc",
+"ae c #000000",
+"aaaaaaababababababababababababac",
+"aaaaabadadadadadadadadadadadadac",
+"aaabadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadaeaeaeaeaeaeadadadac",
+"abadadadadadaeadadadadaeadadadac",
+"abadadadadadaeadaeaeadaeadadadac",
+"abadadadadadaeadaeaeadaeadadadac",
+"abadadadadadaeadadadadaeadadadac",
+"abadadadadadaeaeaeaeaeaeadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadacaa",
+"abadadadadadadadadadadadadacaaaa",
+"acacacacacacacacacacacacacaaaaaa"
+};

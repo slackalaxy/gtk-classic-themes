@@ -1,0 +1,12 @@
+/* XPM */
+static char * bottom_left_active[] = {
+"4 4 4 2",
+"aa c #6e6a66",
+"ab c #fffefb",
+"ac c #efebe7",
+"ad c #d4cfca",
+"aaabacac",
+"aaabacac",
+"aaabadad",
+"aaaaaaaa"
+};

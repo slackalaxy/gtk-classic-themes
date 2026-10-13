@@ -1,0 +1,15 @@
+/* XPM */
+static char * right_active[] = {
+"4 8 3 2",
+"aa c #eaeaea",
+"ab c #a4a4a4",
+"ac c #777777",
+"aaaaabac",
+"aaaaabac",
+"aaaaabac",
+"aaaaabac",
+"aaaaabac",
+"aaaaabac",
+"aaaaabac",
+"aaaaabac"
+};

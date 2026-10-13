@@ -1,0 +1,14 @@
+ThinIce Xfwm4 theme
+-------------------
+A window frame for the ThinIce GTK theme (gtk-classic-themes), built from the shapes of the ThinIce engine:
+
+ - the corners are cut at 45 degrees at the top left and the bottom right, like the ThinIce scrollbar slider;
+ - the title bar carries the diagonal "slash" grip (a dark pair and a light pair of lines) on both sides of the title text;
+ - the buttons are 1 px bevelled squares with the same two corners cut.
+
+Colours are the ThinIce ones: window #D3D3DD, active #C1C1CC, selection #336699, light #ffffff, dark #8e8ea1. Title text colours
+are not set in themerc, so they follow the GTK theme.
+
+Buttons: menu, stick, shade, hide, maximize and close, with the toggled, pressed and inactive images for each.
+
+License: LGPL-2.1, like the rest of gtk-classic-themes.

@@ -1,0 +1,14 @@
+/* XPM */
+static char * bottom_inactive[] = {
+"10 6 4 2",
+"aa c #626562",
+"ab c #cdcecd",
+"ac c #bdbabd",
+"ad c #a4a5a4",
+"aaaaaaaaaaaaaaaaaaaa",
+"abababababababababab",
+"acacacacacacacacacac",
+"adadadadadadadadadad",
+"aaaaaaaaaaaaaaaaaaaa",
+"aaaaaaaaaaaaaaaaaaaa"
+};

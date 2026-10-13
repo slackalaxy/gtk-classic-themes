@@ -1,0 +1,25 @@
+/* XPM */
+static char * maximize_toggled_pressed[] = {
+"16 16 5 2",
+"aa c None",
+"ab c #6a6a80",
+"ac c #ffffff",
+"ad c #c1c1cc",
+"ae c #000000",
+"aaaaaaababababababababababababac",
+"aaaaabadadadadadadadadadadadadac",
+"aaabadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadadadadadadadadadac",
+"abadadadadadadaeaeaeaeaeaeadadac",
+"abadadadadadadaeaeaeaeaeaeadadac",
+"abadadadadaeaeaeaeaeaeadaeadadac",
+"abadadadadaeaeaeaeaeaeadaeadadac",
+"abadadadadaeadadadadaeadaeadadac",
+"abadadadadaeadadadadaeaeaeadadac",
+"abadadadadaeadadadadaeadadadadac",
+"abadadadadaeaeaeaeaeaeadadadadac",
+"abadadadadadadadadadadadadadacaa",
+"abadadadadadadadadadadadadacaaaa",
+"acacacacacacacacacacacacacaaaaaa"
+};
