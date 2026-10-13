@@ -629,13 +629,9 @@ checkbutton:focus label, radiobutton:focus label { border-color: #000000; }
 /* notebooks with no page border (show-border off) draw no page frame in GTK2 */
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
 
-/* file chooser path bar: taller buttons, closer to GTK2 */
-pathbar button, pathbar button.text-button, pathbar button.image-button {
-  padding-top: 7px; padding-bottom: 8px;
-}
 
 /* Thunar path bar: segmented buttons like GTK2 (undo the flat toolbar-button look) */
-.path-bar button {
+.thunar .path-bar button {
   min-height: 17px; min-width: 16px;
   padding: 3px 7px;
   border: 1px solid; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; border-radius: 0;
@@ -643,7 +639,7 @@ pathbar button, pathbar button.text-button, pathbar button.image-button {
   color: @theme_fg_color;
   box-shadow: none;
 }
-.path-bar button:hover { background-color: #E5E5F7; border-color: #ffffff #8686c7 #8686c7 #ffffff; }
-.path-bar button:active, .path-bar button:checked, .path-bar button:hover:active, .path-bar button:hover:checked {
+.thunar .path-bar button:hover { background-color: #E5E5F7; border-color: #ffffff #8686c7 #8686c7 #ffffff; }
+.thunar .path-bar button:active, .thunar .path-bar button:checked, .thunar .path-bar button:hover:active, .thunar .path-bar button:hover:checked {
   background-color: #C1C1CC; border-color: #838393 #ffffff #ffffff #838393;
 }

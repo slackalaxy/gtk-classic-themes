@@ -554,13 +554,9 @@ scrolledwindow.frame > scrollbar.horizontal { margin: -3px -1px -1px -1px; paddi
 /* notebooks with no page border (show-border off) draw no page frame in GTK2 */
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
 
-/* file chooser path bar: taller buttons, closer to GTK2 */
-pathbar button, pathbar button.text-button, pathbar button.image-button {
-  padding-top: 6px; padding-bottom: 7px;
-}
 
 /* Thunar path bar: segmented buttons like GTK2 (undo the flat toolbar-button look) */
-.path-bar button {
+.thunar .path-bar button {
   min-height: 17px; min-width: 16px;
   padding: 2px 6px;
   border: 1px solid; border-color: #ffffff #a4a4a4 #a4a4a4 #ffffff; border-radius: 0;
@@ -568,7 +564,7 @@ pathbar button, pathbar button.text-button, pathbar button.image-button {
   color: @theme_fg_color;
   box-shadow: none;
 }
-.path-bar button:hover { background-color: #f1f1f1; border-color: #ffffff #a9a9a9 #a9a9a9 #ffffff; }
-.path-bar button:active, .path-bar button:checked, .path-bar button:hover:active, .path-bar button:hover:checked {
+.thunar .path-bar button:hover { background-color: #f1f1f1; border-color: #ffffff #a9a9a9 #a9a9a9 #ffffff; }
+.thunar .path-bar button:active, .thunar .path-bar button:checked, .thunar .path-bar button:hover:active, .thunar .path-bar button:hover:checked {
   background-color: #d3d3d3; border-color: #939393 #ffffff #ffffff #939393;
 }
