@@ -572,6 +572,6 @@ checkbutton:focus-visible label, radiobutton:focus-visible label { border-color:
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
 
 /* file chooser path bar: taller buttons, closer to GTK2 */
-pathbar button, pathbar button.text-button, pathbar button.image-button, .path-bar button {
+pathbar button, pathbar button.text-button, pathbar button.image-button {
   padding-top: 6px; padding-bottom: 7px;
 }
