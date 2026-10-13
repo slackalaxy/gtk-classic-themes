@@ -371,7 +371,7 @@ menuitem label, menuitem accelerator { color: inherit; }
 menuitem accelerator { opacity: 1; }
 /* GTK2 puts the icon further from the menu edge than the text would suggest: icon 7px from the border, text 26px */
 menuitem image { margin-left: 4px; margin-right: -4px; }
-menuitem arrow { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); color: inherit; }
+menuitem arrow { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); color: inherit; -gtk-icon-transform: scale(0.65); }
 menuitem arrow:dir(rtl) { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 menu .scroll-button, menu arrow { background-color: transparent; border: none; }
 

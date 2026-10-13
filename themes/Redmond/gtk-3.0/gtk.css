@@ -329,10 +329,12 @@ menuitem:hover, menuitem:selected, modelbutton:hover, modelbutton:selected {
 menuitem:disabled, modelbutton:disabled { color: @insensitive_fg_color; background-color: transparent; }
 menuitem:disabled:hover { background-color: transparent; color: @insensitive_fg_color; }
 menuitem label, menuitem accelerator { color: inherit; }
-menuitem arrow { color: inherit; }
-menu .scroll-button, menu arrow { background-color: transparent; border: none; }
+menuitem arrow { color: inherit; background-image: url("assets/arrow-right.png"); }
+/* some GTK versions mark the menu arrow insensitive: keep the normal / highlighted arrow in every state */
+menuitem:not(:hover):not(:selected) arrow, menuitem:not(:hover):not(:selected) arrow:disabled { background-image: url("assets/arrow-right.png"); }
 menuitem:hover arrow, menuitem:selected arrow { background-image: url("assets/arrow-right-selected.png"); }
-menuitem arrow { background-image: url("assets/arrow-right.png"); }
+menuitem:hover arrow:disabled, menuitem:selected arrow:disabled { background-image: url("assets/arrow-right-selected.png"); }
+menu .scroll-button, menu arrow { background-color: transparent; border: none; }
 
 /* menubar: flat with a thin light/dark border; items stay grey and get a thin raised (menu open: sunken) border */
 menubar, .menubar {

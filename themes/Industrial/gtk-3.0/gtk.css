@@ -431,7 +431,7 @@ menuitem:disabled, modelbutton:disabled { color: @insensitive_fg_color; backgrou
 menuitem:disabled:hover { background-color: transparent; color: @insensitive_fg_color; }
 menuitem label, menuitem accelerator { color: inherit; }
 menuitem accelerator { opacity: 0.6; }
-menuitem arrow { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); min-width: 16px; min-height: 16px; color: inherit; }
+menuitem arrow { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); min-width: 16px; min-height: 16px; color: inherit; -gtk-icon-transform: scale(0.65); }
 menuitem arrow:dir(rtl) { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 menu arrow.top    { -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
 menu arrow.bottom { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }

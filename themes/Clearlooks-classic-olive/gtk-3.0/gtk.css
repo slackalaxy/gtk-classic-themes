@@ -374,9 +374,12 @@ menuitem:disabled, modelbutton:disabled { color: @insensitive_fg_color; backgrou
 menuitem:disabled:hover { background-image: none; background-color: transparent; color: @insensitive_fg_color; }
 menuitem label, menuitem accelerator { color: inherit; }
 menuitem accelerator { opacity: 0.6; }
-menuitem arrow { color: inherit; }
-menu .scroll-button, menu arrow { background-color: transparent; border: none; }
+menuitem arrow { color: inherit; background-image: url("assets/arrow-right.png"); }
+/* some GTK versions mark the menu arrow insensitive: keep the normal / highlighted arrow in every state */
+menuitem:not(:hover):not(:selected) arrow, menuitem:not(:hover):not(:selected) arrow:disabled { background-image: url("assets/arrow-right.png"); }
 menuitem:hover arrow, menuitem:selected arrow { background-image: url("assets/arrow-right-selected.png"); }
+menuitem:hover arrow:disabled, menuitem:selected arrow:disabled { background-image: url("assets/arrow-right-selected.png"); }
+menu .scroll-button, menu arrow { background-color: transparent; border: none; }
 
 menubar, .menubar {
   background-color: #ece9d8;
