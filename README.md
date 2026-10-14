@@ -2,7 +2,7 @@
 [![AI generated](https://img.shields.io/badge/AI-generated-D97757?logo=claude&logoColor=white&labelColor=3b3b4f)](https://claude.ai/)
 ![H.sap verified](https://img.shields.io/badge/H.sap-verified-2ea44f?labelColor=3b3b4f)
 
-GTK3 and GTK4 ports of the classic GTK2 themes from [gtk-engines](https://download.gnome.org/sources/gtk-engines/2.20/) (2.20.2) and [clearlooks](https://sourceforge.net/projects/clearlooks/files/clearlooks/clearlooks%200.6.2/) (0.6.2). Colours and geometry come from the engine source and from measurements of real GTK2 renderings. Each theme also contains a matching Xfwm4 (Xfce window manager) theme, adapted mostly from [Xfwm4 themes](https://archive.xfce.org/src/art/xfwm4-themes/4.10/) (4.10.0) and [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix) (7.1). 
+GTK3 and GTK4 ports of the classic GTK2 themes from [gtk-engines](https://download.gnome.org/sources/gtk-engines/2.20/) (2.20.2) and [clearlooks](https://sourceforge.net/projects/clearlooks/files/clearlooks/clearlooks%200.6.2/) (0.6.2). Colours and geometry come from the engine source and from measurements of real GTK2 renderings. Each theme also contains a matching Xfwm4 (Xfce window manager) theme, adapted mostly from [Xfwm4 themes](https://archive.xfce.org/src/art/xfwm4-themes/4.10/) (4.10.0) and [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix) (7.1).
 
 **Porting was done entirely by Claude, by Anthropic.** So, don't credit me, credit their Pro plan. 
 
@@ -70,8 +70,11 @@ gtk-overlay-scrolling=false
 - `gtk-font-rendering=manual` makes GTK4 follow your own font settings (antialiasing, hinting, subpixel order from fontconfig / `gtk-xft-*`) instead of its automatic choice.
 - `gtk-overlay-scrolling=false` turns off overlay scrollbars, so the classic scrollbars are always visible (GTK4 has no stepper buttons).
 
-## Known limits
-libadwaita apps ignore third-party themes. Firefox draws its own dialog buttons.
+## Testing
+- **System**: CRUX (3.8) with Xfce (4.20)
+- **Toolkits**: GTK2 (2.24.33), GTK3 (3.24.52), GTK4 (4.24.1)
+- **Known quirks**: Gnumeric’s undo/redo arrow buttons keep a raised look; libadwaita apps mostly ignore these themes; Firefox draws its own dialog buttons; menu arrows and toolbar combo boxes may differ on other GTK versions.
+- **Not tested**: other desktops (MATE, Cinnamon, GNOME) and other GTK versions. Reports are welcome.
 
 ## Original work credits
 See [AUTHORS.md](AUTHORS.md). Licences: LGPL-2.1 (see `LICENSE`); the Clearlooks-classic variants are GPL-2 (see `COPYING-GPL-2`, details in [LICENSES.md](LICENSES.md)). The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix)), Erçin Eker (Industrial) and xfwm4-themes (Crux, Redmond), see the same files.
