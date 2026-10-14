@@ -1,0 +1,8 @@
+/* XPM */
+static char * right_active_xpm[] = {
+"5 1 4 1",
+" 	c None",
+".	c #111213 s active_border_color",
+"@	c #3b3e3f s active_color_2",
+"#	c #2b2d2e s active_shadow_2",
+"@@@#."};

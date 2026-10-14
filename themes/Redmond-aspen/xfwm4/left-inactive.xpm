@@ -1,0 +1,7 @@
+/* XPM */
+static char * left_inactive_xpm[] = {
+"5 1 3 1",
+" 	c None",
+"+	c #5a5e60 s inactive_hilight_2",
+"@	c #3b3e3f s inactive_color_2",
+"@+@@@"};

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Redmond-aspen
+Comment=Dark variant of the Redmond (Redmond95) theme, coloured after Greybird-dark
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Redmond-aspen

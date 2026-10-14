@@ -25,6 +25,7 @@ Joke aside, that's not the type of AI slop where I simply asked the LLM to trans
 <tr>
 <td align="center"><sub>Mist</sub><br><a href="screenshots/Mist.png"><img src="screenshots/Mist.png" width="220"></a></td>
 <td align="center"><sub>Redmond</sub><br><a href="screenshots/Redmond.png"><img src="screenshots/Redmond.png" width="220"></a></td>
+<td align="center"><sub>Redmond-aspen</sub><br><a href="screenshots/Redmond-aspen.png"><img src="screenshots/Redmond-aspen.png" width="220"></a></td>
 <td align="center"><sub>ThinIce</sub><br><a href="screenshots/ThinIce.png"><img src="screenshots/ThinIce.png" width="220"></a></td>
 </tr>
 </table>
@@ -42,6 +43,7 @@ Joke aside, that's not the type of AI slop where I simply asked the LLM to trans
 | Industrial | gtk-engines 2.20.2 Industrial | original | ported | ported | modified |
 | Mist | gtk-engines 2.20.2 Mist | original | ported | ported | new |
 | Redmond | gtk-engines 2.20.2 Redmond | original | ported | ported | original |
+| Redmond-aspen | gtk-engines 2.20.2 Redmond, dark colours after Greybird-dark | modified | ported | ported | modified |
 | ThinIce | gtk-engines 2.20.2 ThinIce | original | ported | ported | new |
 
 ## Installing
@@ -78,7 +80,7 @@ gtk-overlay-scrolling=false
 - **Not tested**: other desktops (MATE, Cinnamon, GNOME) and other GTK versions. Reports are welcome.
 
 ## Original work credits
-See [AUTHORS.md](AUTHORS.md). Licences: LGPL-2.1 (see `LICENSE`); the Clearlooks-classic variants are GPL-2 (see `COPYING-GPL-2`, details in [LICENSES.md](LICENSES.md)). The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix)), Erçin Eker (Industrial) and xfwm4-themes (Crux, Redmond), see the same files.
+See [AUTHORS.md](AUTHORS.md). Licences: LGPL-2.1 (see `LICENSE`); the Clearlooks-classic variants are GPL-2 (see `COPYING-GPL-2`, details in [LICENSES.md](LICENSES.md)). The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix)), Erçin Eker (Industrial) and xfwm4-themes (Crux, Redmond, Redmond-aspen), see the same files. The dark colours of Redmond-aspen are taken from Greybird-dark.
 
 ## Links
 - For a well-maintained, actively developed GTK3/GTK4 port of a classic theme, see [Bluecurve](https://github.com/neeeeow/Bluecurve).
