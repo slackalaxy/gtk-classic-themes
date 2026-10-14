@@ -45,8 +45,9 @@ Joke aside, that's not the type of AI slop where I simply asked the LLM to trans
 | ThinIce | gtk-engines 2.20.2 ThinIce | original | ported | ported | new |
 
 ## Installing
-- **Per user:** copy the theme folders you want from `themes/` into `~/.themes/`.
-- **System-wide:** copy the theme folders you want from `themes/` into `/usr/share/themes/`. In this case make sure the `gtk-2.0` folders of Clearlooks, Crux, Industrial, Redmond, Mist and ThinIce do not overwrite the ones already installed by gtk2-engines (skip or delete those `gtk-2.0` folders).
+- **Per user:** copy the themes from `themes/` into `~/.themes/`.
+- **System-wide:** copy the themes `themes/` into `/usr/share/themes/`. In this case make sure the `gtk-2.0` folders of Clearlooks, Crux, Industrial, Redmond, Mist and ThinIce do not overwrite the ones already installed by gtk2-engines (skip or delete those `gtk-2.0` folders).
+- For GTK2 you need the gtk(2)-engines installed.
 
 ## Recommended GTK3 settings
 GTK3 uses overlay (auto-hiding) scrollbars by default, which these classic themes are not designed for. To keep the scrollbars always visible, set this environment variable:
@@ -78,3 +79,6 @@ gtk-overlay-scrolling=false
 
 ## Original work credits
 See [AUTHORS.md](AUTHORS.md). Licences: LGPL-2.1 (see `LICENSE`); the Clearlooks-classic variants are GPL-2 (see `COPYING-GPL-2`, details in [LICENSES.md](LICENSES.md)). The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix)), Erçin Eker (Industrial) and xfwm4-themes (Crux, Redmond), see the same files.
+
+## Links
+- For a well-maintained, actively developed GTK3/GTK4 port of a classic theme, see [Bluecurve](https://github.com/neeeeow/Bluecurve).
