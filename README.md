@@ -46,8 +46,8 @@ Joke aside, that's not the type of AI slop where I simply asked the LLM to trans
 
 ## Installing
 - **Per user:** copy the themes from `themes/` into `~/.themes/`.
-- **System-wide:** copy the themes `themes/` into `/usr/share/themes/`. In this case make sure the `gtk-2.0` folders of Clearlooks, Crux, Industrial, Redmond, Mist and ThinIce do not overwrite the ones already installed by gtk2-engines (skip or delete those `gtk-2.0` folders).
-- For GTK2 you need the gtk(2)-engines installed.
+- **System-wide:** copy the themes from `themes/` into `/usr/share/themes/`.
+- For the GTK2 themes you need the gtk(2)-engines installed. If you install system-wide, make sure the `gtk-2.0` folders of Clearlooks, Crux, Industrial, Redmond, Mist and ThinIce do not overwrite the ones already installed by gtk(2)-engines.
 
 ## Recommended GTK3 settings
 GTK3 uses overlay (auto-hiding) scrollbars by default, which these classic themes are not designed for. To keep the scrollbars always visible, set this environment variable:
