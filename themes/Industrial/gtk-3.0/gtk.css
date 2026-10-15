@@ -171,11 +171,13 @@ button.text-button { padding: 2px 8px; }
 button.circular { border-radius: 100px; }
 
 /* linked buttons (button boxes, segmented controls) */
-.linked:not(.vertical) > button:not(:first-child),
+.linked:not(.vertical) > button:not(:first-child) { border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: -1px; }
 .linked:not(.vertical) > combobox:not(:first-child) > box > button.combo { border-top-left-radius: 0; border-bottom-left-radius: 0; border-left-width: 0; }
 .linked:not(.vertical) > button:not(:last-child),
 .linked:not(.vertical) > combobox:not(:last-child) > box > button.combo { border-top-right-radius: 0; border-bottom-right-radius: 0; }
-.linked.vertical > button:not(:first-child) { border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 0; }
+/* search bars: the buttons after the entry are separate, fully rounded buttons */
+.linked:not(.vertical) > combobox ~ button:not(:first-child), .linked:not(.vertical) > entry ~ button:not(:first-child) { border-radius: 2.5px; }
+.linked.vertical > button:not(:first-child) { border-top-left-radius: 0; border-top-right-radius: 0; margin-top: -1px; }
 .linked.vertical > button:not(:last-child) { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 
 /* ---- check boxes and radio buttons ----

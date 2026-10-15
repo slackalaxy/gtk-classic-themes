@@ -148,6 +148,8 @@ toolbar combobox button.combo:disabled { border-color: rgba(0,0,0,0.05); backgro
 /* linked buttons */
 .linked:not(.vertical) > button:not(:first-child) { margin-left: -1px; border-top-left-radius: 0; border-bottom-left-radius: 0; }
 .linked:not(.vertical) > button:not(:last-child) { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+/* search bars: the buttons after the entry are separate, fully rounded buttons */
+.linked:not(.vertical) > combobox ~ button:not(:first-child), .linked:not(.vertical) > entry ~ button:not(:first-child) { border-radius: 3px; }
 .linked.vertical > button:not(:first-child) { margin-top: -1px; border-top-left-radius: 0; border-top-right-radius: 0; }
 .linked.vertical > button:not(:last-child) { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 

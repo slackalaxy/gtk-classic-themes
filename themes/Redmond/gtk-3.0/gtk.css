@@ -122,8 +122,8 @@ toolbar combobox button.combo:active, toolbar combobox button.combo:checked { bo
 toolbar combobox button.combo:disabled { background-image: none; background-color: #d4cfc7; border-color: #ffffff #403f3e #403f3e #ffffff; box-shadow: inset 1px 1px 0 #d4cfc7, inset -1px -1px 0 #9a9286; }
 
 /* linked buttons */
-.linked:not(.vertical) > button:not(:first-child) { border-left-width: 0; }
-.linked.vertical > button:not(:first-child) { border-top-width: 0; }
+.linked:not(.vertical) > button:not(:first-child) { margin-left: -1px; }
+.linked.vertical > button:not(:first-child) { margin-top: -1px; }
 
 /* ===== check boxes and radio buttons: the 13px boxes are bitmaps of the engine's own drawing ===== */
 check, radio {

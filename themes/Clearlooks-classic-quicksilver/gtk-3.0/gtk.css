@@ -138,11 +138,13 @@ toolbar combobox button.combo:active, toolbar combobox button.combo:checked { ba
 toolbar combobox button.combo:disabled { background-image: linear-gradient(to bottom, #f3f3f3 0%, #e7e7e7 25%, #e1e1e1 75%, #d1d1d1 100%); background-color: #e6e6e6; border-color: #b5b9bd; box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #dee1e3, 0 -1px 0 0 #e2e2e2, 0 1px 0 0 #ffffff; }
 
 /* linked buttons */
-.linked:not(.vertical) > button:not(:first-child),
+.linked:not(.vertical) > button:not(:first-child) { border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: -1px; }
 .linked:not(.vertical) > combobox:not(:first-child) > box > button.combo { border-top-left-radius: 0; border-bottom-left-radius: 0; border-left-width: 0; }
 .linked:not(.vertical) > button:not(:last-child),
 .linked:not(.vertical) > combobox:not(:last-child) > box > button.combo { border-top-right-radius: 0; border-bottom-right-radius: 0; }
-.linked.vertical > button:not(:first-child) { border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 0; }
+/* search bars: the buttons after the entry are separate, fully rounded buttons */
+.linked:not(.vertical) > combobox ~ button:not(:first-child), .linked:not(.vertical) > entry ~ button:not(:first-child) { border-radius: 3px; }
+.linked.vertical > button:not(:first-child) { border-top-left-radius: 0; border-top-right-radius: 0; margin-top: -1px; }
 .linked.vertical > button:not(:last-child) { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 
 /* ===== check boxes and radio buttons =====

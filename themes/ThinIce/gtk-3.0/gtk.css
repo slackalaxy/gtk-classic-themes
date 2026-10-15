@@ -117,9 +117,9 @@ toolbar combobox button.combo:active, toolbar combobox button.combo:checked { ba
 toolbar combobox button.combo:disabled { background-image: none; background-color: #D3D3DD; border-color: #ffffff #8e8ea1 #8e8ea1 #ffffff; }
 
 /* linked buttons */
-.linked:not(.vertical) > button:not(:first-child) { border-left-width: 0; }
+.linked:not(.vertical) > button:not(:first-child) { margin-left: -1px; }
 .linked:not(.vertical) > button:checked:not(:first-child), .linked:not(.vertical) > button:active:not(:first-child) { border-left-width: 1px; }
-.linked.vertical > button:not(:first-child) { border-top-width: 0; }
+.linked.vertical > button:not(:first-child) { margin-top: -1px; }
 .linked.vertical > button:checked:not(:first-child), .linked.vertical > button:active:not(:first-child) { border-top-width: 1px; }
 
 /* ===== check boxes (10px) and radio buttons (13px): bitmaps of the engine's own drawing ===== */

@@ -115,8 +115,8 @@ toolbar combobox button.combo:active, toolbar combobox button.combo:checked { ba
 toolbar combobox button.combo:disabled { background-image: none; background-color: #dedede; border-color: #9c9c9c; }
 
 /* linked buttons */
-.linked:not(.vertical) > button:not(:first-child) { border-left-width: 0; }
-.linked.vertical > button:not(:first-child) { border-top-width: 0; }
+.linked:not(.vertical) > button:not(:first-child) { margin-left: -1px; }
+.linked.vertical > button:not(:first-child) { margin-top: -1px; }
 
 /* ===== check boxes (10px) and radio buttons (12px): bitmaps of the engine's own drawing ===== */
 check, radio {
