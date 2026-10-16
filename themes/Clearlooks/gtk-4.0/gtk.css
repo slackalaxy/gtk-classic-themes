@@ -581,3 +581,12 @@ checkbutton:focus-visible label, radiobutton:focus-visible label { border-color:
 /* notebooks with no page border (show-border off) draw no page frame in GTK2 */
 notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
 
+
+/* ===== Icons =====
+   GTK4 applications ask for the "-symbolic" (single-colour) version of many
+   icons. The GTK2 and GTK3 parts of this theme use the normal coloured icons
+   of the icon theme, so do the same here. Icons in header bars, entries,
+   spin buttons and scales keep the symbolic style, as they are drawn in the
+   text colour. */
+image { -gtk-icon-style: regular; }
+headerbar image, .titlebar image, windowcontrols image, entry image, spinbutton image, scale image { -gtk-icon-style: requested; }
