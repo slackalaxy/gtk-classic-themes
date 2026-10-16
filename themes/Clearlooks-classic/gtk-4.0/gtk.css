@@ -374,15 +374,22 @@ tooltip label { color: @tooltip_fg_color; }
 notebook.frame { border: none; border-radius: 0; }
 notebook > header { background-color: transparent; padding: 0; }
 notebook > header.top    { border-bottom: 1px solid #a6978a; }
-notebook > header.bottom { border-top: 1px solid #a6978a; }
+notebook > header.bottom { border-top: none; }
 notebook > header.left   { border-right: 1px solid #a6978a; }
-notebook > header.right  { border-left: 1px solid #a6978a; }
+notebook > header.right  { border-left: none; }
 notebook > stack { background-color: #eae4df; }
-notebook > stack:last-child  { border: 1px solid #a6978a; border-top-width: 0; box-shadow: inset 1px 0 0 #fcfbfa, inset -1px -1px 0 #ddd4cd; }
-notebook > stack:first-child { border: 1px solid #a6978a; border-bottom-width: 0; box-shadow: inset 1px 1px 0 #fcfbfa, inset -1px 0 0 #ddd4cd; }
+/* The page border belongs to the stack on all four sides. The side facing the tabs loses its border where the
+   header already draws it (top and left tabs); with bottom and right tabs the header draws none, the stack does.
+   The header is the previous sibling for top and left tabs, so "header.top + stack" can pick those cases. */
+notebook > stack:last-child  { border: 1px solid #a6978a; box-shadow: inset 1px 1px 0 #fcfbfa, inset -1px -1px 0 #ddd4cd; }
+notebook > header.top + stack  { border-top-width: 0;  box-shadow: inset 1px 0 0 #fcfbfa, inset -1px -1px 0 #ddd4cd; }
+notebook > header.left + stack { border-left-width: 0; box-shadow: inset 1px 1px 0 #fcfbfa, inset -1px -1px 0 #ddd4cd; }
+notebook > stack:first-child { border: 1px solid #a6978a; box-shadow: inset 1px 1px 0 #fcfbfa, inset -1px -1px 0 #ddd4cd; }
 notebook > stack:only-child  { border: 1px solid #a6978a; box-shadow: inset 1px 1px 0 #fcfbfa, inset -1px -1px 0 #ddd4cd; }
 /* a framed scrolled window directly in a page would double the page border */
 notebook > stack > scrolledwindow.frame { border-width: 0; }
+/* a scrolled window in a page must not paint the (lighter) window colour over the page: GTK2 shows one colour on the whole page */
+notebook > stack > scrolledwindow { background-color: transparent; }
 
 notebook > header > tabs > tab {
   min-height: 17px; min-width: 16px; padding: 3px 7px;
@@ -589,3 +596,7 @@ notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
    text colour. */
 image { -gtk-icon-style: regular; }
 headerbar image, .titlebar image, windowcontrols image, entry image, spinbutton image, scale image { -gtk-icon-style: requested; }
+
+/* a scrollbar in a scrolled window without a frame has no frame to close its ends: give the trough end lines (GTK2 had stepper buttons there) */
+scrolledwindow:not(.frame) > scrollbar.vertical trough { border-top-width: 1px; border-bottom-width: 1px; }
+scrolledwindow:not(.frame) > scrollbar.horizontal trough { border-left-width: 1px; border-right-width: 1px; }

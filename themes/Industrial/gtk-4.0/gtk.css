@@ -606,3 +606,7 @@ notebook:not(.frame) > stack { border-width: 0; box-shadow: none; }
    text colour. */
 image { -gtk-icon-style: regular; }
 headerbar image, .titlebar image, windowcontrols image, entry image, spinbutton image, scale image { -gtk-icon-style: requested; }
+
+/* a scrollbar in a scrolled window without a frame has no frame to close its ends: give the trough end lines (GTK2 had stepper buttons there) */
+scrolledwindow:not(.frame) > scrollbar.vertical trough { border-top: 1px solid #b5b5b5; border-bottom: 1px solid #b5b5b5; }
+scrolledwindow:not(.frame) > scrollbar.horizontal trough { border-left: 1px solid #b5b5b5; border-right: 1px solid #b5b5b5; }
