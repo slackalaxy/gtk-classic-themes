@@ -1,4 +1,6 @@
-# Details
+# Theme details, credits and licences
+
+## Details
 | Folder (in `themes/`) | Based on | GTK2 | GTK3 | GTK4 | Xfwm4 |
 |---|---|---|---|---|---|
 | Clearlooks | gtk-engines 2.20.2 Clearlooks | original | ported | ported | recoloured |
@@ -29,4 +31,18 @@ from the engine source and comparing the result pixel by pixel with real GTK2 re
 | ThinIce | gtk-engines 2.20.2 ThinIce: Tim Gerla, Tomas Ögren, Richard Hult |
 | Crux | gtk-engines 2.20.2 Crux: Arlo Rose (design), John Harper (implementation), Seth Nickell (GTK2 implementation), Josh Barrow (original GTK+ theme); Lapo Calamandrei and Thomas Wood for the later gtkrc |
 
-See [AUTHORS.md](AUTHORS.md). Licences: LGPL-2.1 (see `LICENSE`); the Clearlooks-classic variants are GPL-2 (see `COPYING-GPL-2`, details in [LICENSES.md](LICENSES.md)). The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix)), Erçin Eker (Industrial) and xfwm4-themes (Crux, Redmond, Redmond-aspen), see the same files. The dark colours of Redmond-aspen are taken from Greybird-dark.
+The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix)), Erçin Eker (Industrial) and xfwm4-themes (Crux, Redmond, Redmond-aspen). The dark colours of Redmond-aspen are taken from Greybird-dark.
+
+## Licences
+The ports are derived from existing GPL/LGPL code, so they carry the same licences:
+
+- Clearlooks, Industrial, Redmond, Mist, ThinIce, Crux, Cruxblu (derived from gtk-engines 2.20.2): GNU LGPL 2.1 or later, see [LGPL-2.1](./LICENSE).
+- Clearlooks-classic and its variants deepsky, olive, quicksilver (derived from clearlooks 0.6.2): GNU GPL 2 or later, see [GPL-2](./COPYING-GPL-2).
+
+The `gtk-2.0` folders hold the unchanged gtkrc files of the original themes.
+
+### Xfwm4 themes
+- Mist and ThinIce (drawn for this project to match the GTK themes): GNU LGPL 2.1 or later, like the GTK ports.
+- Industrial: based on the Ximian Desktop 2 default window decoration by Erçin Eker (GPL).
+- Clearlooks and the Clearlooks-classic variants: recolours of the Clearlooks Xfwm4 theme by Casey Kirsle, taken from [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix), which lists it under the GPL (version not stated).
+- Crux, Cruxblu and Redmond: from xfwm4-themes (GPL 2 or later). Crux is a port of the Sawfish theme of the same name; Redmond is a port of the Oroborus theme "windows".
