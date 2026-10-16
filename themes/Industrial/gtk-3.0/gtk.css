@@ -660,7 +660,7 @@ switch {
   background-color: #d1d1d1;
   color: @theme_fg_color;
 }
-switch:checked { background-color: @progress_bg_color; border-color: #778899; color: @theme_fg_color; }
+switch:checked { background-color: @progress_bg_color; border-color: #778899; color: #ffffff; }
 switch:disabled { background-color: @insensitive_bg_color; color: @insensitive_fg_color; }
 switch slider {
   min-width: 22px; min-height: 18px; margin: 0;

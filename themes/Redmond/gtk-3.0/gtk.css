@@ -505,7 +505,7 @@ switch {
   background-color: #d4cfc7; color: @theme_fg_color;
   box-shadow: inset 1px 1px 0 #403f3e, inset -1px -1px 0 #d4cfc7;
 }
-switch:checked { background-color: #0a2469; }
+switch:checked { background-color: #0a2469; color: #ffffff; }
 switch:disabled { background-color: @insensitive_bg_color; color: @insensitive_fg_color; }
 switch slider {
   min-width: 22px; min-height: 18px; margin: 0;

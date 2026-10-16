@@ -597,7 +597,7 @@ switch {
   border: 1px solid #aaa293; border-radius: 3px;
   background-color: #d3cdc3; color: @theme_fg_color;
 }
-switch:checked { background-color: #5ea0dd; border-color: #3a6389; }
+switch:checked { background-color: #5ea0dd; border-color: #3a6389; color: #ffffff; }
 switch:disabled { background-color: @insensitive_bg_color; color: @insensitive_fg_color; }
 switch slider {
   min-width: 22px; min-height: 18px; margin: 0;
