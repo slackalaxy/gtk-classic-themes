@@ -1,6 +1,6 @@
 # gtk-classic-themes
 [![AI generated](https://img.shields.io/badge/AI-generated-D97757?logo=claude&logoColor=white&labelColor=3b3b4f)](https://claude.ai/)
-![H.sap verified](https://img.shields.io/badge/H.sap-verified-2ea44f?labelColor=3b3b4f)
+![Manually verified](https://img.shields.io/badge/Manually-tested-2ea44f?labelColor=3b3b4f)
 
 GTK3 and GTK4 ports of the classic GTK2 themes from [gtk-engines](https://download.gnome.org/sources/gtk-engines/2.20/) (2.20.2) and [clearlooks](https://sourceforge.net/projects/clearlooks/files/clearlooks/clearlooks%200.6.2/) (0.6.2). Colours and geometry come from the engine source and from measurements of real GTK2 renderings. Each theme also contains a matching Xfwm4 (Xfce window manager) theme, adapted mostly from [Xfwm4 themes](https://archive.xfce.org/src/art/xfwm4-themes/4.10/) (4.10.0) and [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix) (7.1).
 
@@ -30,26 +30,12 @@ Joke aside, that's not the type of AI slop where I simply asked the LLM to trans
 </tr>
 </table>
 
-## Details
-| Folder (in `themes/`) | Based on | GTK2 | GTK3 | GTK4 | Xfwm4 |
-|---|---|---|---|---|---|
-| Clearlooks | gtk-engines 2.20.2 Clearlooks | original | ported | ported | recoloured |
-| Clearlooks-classic | clearlooks-0.6.2 Clearlooks | original | ported | ported | recoloured |
-| Clearlooks-classic-deepsky | clearlooks-0.6.2 DeepSky | original | ported | ported | recoloured |
-| Clearlooks-classic-olive | clearlooks-0.6.2 Olive | original | ported | ported | recoloured |
-| Clearlooks-classic-quicksilver | clearlooks-0.6.2 Quicksilver | original | ported | ported | recoloured |
-| Crux | gtk-engines 2.20.2 Crux | original | ported | ported | recoloured |
-| Cruxblu | gtk-engines 2.20.2 Crux | modified | ported | ported | original Crux |
-| Industrial | gtk-engines 2.20.2 Industrial | original | ported | ported | modified |
-| Mist | gtk-engines 2.20.2 Mist | original | ported | ported | new |
-| Redmond | gtk-engines 2.20.2 Redmond | original | ported | ported | original |
-| Redmond-aspen | gtk-engines 2.20.2 Redmond, dark colours after Greybird-dark | modified | ported | ported | modified |
-| ThinIce | gtk-engines 2.20.2 ThinIce | original | ported | ported | new |
+For more details about the themes, credits and original authors check [themes/README.md]( ./themes/README.md).
 
 ## Installing
-- **Per user:** copy the themes from `themes/` into `~/.themes/`.
-- **System-wide:** copy the themes from `themes/` into `/usr/share/themes/`.
-- For the GTK2 themes you need the gtk(2)-engines installed. If you install system-wide, make sure the `gtk-2.0` folders of Clearlooks, Crux, Industrial, Redmond, Mist and ThinIce do not overwrite the ones already installed by gtk(2)-engines.
+- **Per user:** copy the themes folders from `themes/` into `~/.themes/`.
+- **System-wide:** copy them into `/usr/share/themes/`.
+- For the GTK2 themes you need the gtk(2)-engines installed from your distro. If you install the gtk-classic-themes system-wide, make sure the `gtk-2.0` folders of Clearlooks, Crux, Industrial, Redmond, Mist and ThinIce do not overwrite the ones already installed by gtk(2)-engines.
 
 ## Recommended GTK3 settings
 GTK3 uses overlay (auto-hiding) scrollbars by default, which these classic themes are not designed for. To keep the scrollbars always visible, set this environment variable:
@@ -78,9 +64,6 @@ gtk-overlay-scrolling=false
 - **Toolkits**: GTK2 (2.24.33), GTK3 (3.24.52), GTK4 (4.24.1)
 - **Known quirks**: Gnumeric’s undo/redo arrow buttons keep a raised look; libadwaita apps mostly ignore these themes; Firefox draws its own dialog buttons; menu arrows and toolbar combo boxes may differ on other GTK versions.
 - **Not tested**: other desktops (MATE, Cinnamon, GNOME) and other GTK versions. Reports are welcome.
-
-## Original work credits
-See [AUTHORS.md](AUTHORS.md). Licences: LGPL-2.1 (see `LICENSE`); the Clearlooks-classic variants are GPL-2 (see `COPYING-GPL-2`, details in [LICENSES.md](LICENSES.md)). The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix)), Erçin Eker (Industrial) and xfwm4-themes (Crux, Redmond, Redmond-aspen), see the same files. The dark colours of Redmond-aspen are taken from Greybird-dark.
 
 ## Links
 - For a well-maintained, actively developed GTK3/GTK4 port of a classic theme, see [Bluecurve](https://github.com/neeeeow/Bluecurve).
