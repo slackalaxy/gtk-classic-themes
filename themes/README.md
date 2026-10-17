@@ -36,8 +36,8 @@ The Xfwm4 themes are based on the Xfwm4 themes of Casey Kirsle (Clearlooks, via 
 ## Licences
 The ports are derived from existing GPL/LGPL code, so they carry the same licences:
 
-- Clearlooks, Industrial, Redmond, Mist, ThinIce, Crux, Cruxblu (derived from gtk-engines 2.20.2): GNU LGPL 2.1 or later, see [LGPL-2.1](./LICENSE-LGPL-2.1).
-- Clearlooks-classic and its variants deepsky, olive, quicksilver (derived from clearlooks 0.6.2): GNU GPL 2 or later, see [GPL-2](./LICENSE-GPL-2).
+- Clearlooks, Industrial, Redmond, Mist, ThinIce, Crux, Cruxblu (derived from gtk-engines 2.20.2): GNU LGPL 2.1 or later, see [LGPL-2.1](../LICENSE-LGPL-2.1).
+- Clearlooks-classic and its variants deepsky, olive, quicksilver (derived from clearlooks 0.6.2): GNU GPL 2 or later, see [GPL-2](../LICENSE-GPL-2).
 
 The `gtk-2.0` folders hold the unchanged gtkrc files of the original themes.
 
