@@ -1,6 +1,6 @@
 # gtk-classic-themes
-[![AI generated](https://img.shields.io/badge/AI-generated-D97757?logo=claude&logoColor=white&labelColor=3b3b4f)](https://claude.ai/)
-![Manually verified](https://img.shields.io/badge/Manually-tested-2ea44f?labelColor=3b3b4f)
+[![Claude generated](https://img.shields.io/badge/Claude-generated-D97757?logo=claude&logoColor=white&labelColor=3b3b4f)](https://claude.ai/)
+![Manual testing](https://img.shields.io/badge/Manual-testing-2ea44f?labelColor=3b3b4f)
 
 GTK3 and GTK4 ports of the classic GTK2 themes from [gtk-engines](https://download.gnome.org/sources/gtk-engines/2.20/) (2.20.2) and [clearlooks](https://sourceforge.net/projects/clearlooks/files/clearlooks/clearlooks%200.6.2/) (0.6.2). Colours and geometry come from the engine source and from measurements of real GTK2 renderings. Each theme also contains a matching Xfwm4 (Xfce window manager) theme, adapted mostly from [Xfwm4 themes](https://archive.xfce.org/src/art/xfwm4-themes/4.10/) (4.10.0) and [Clearlooks-Phenix](https://github.com/jpfleury/clearlooks-phenix) (7.1).
 

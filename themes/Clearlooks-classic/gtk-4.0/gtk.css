@@ -389,7 +389,7 @@ notebook > stack:only-child  { border: 1px solid #a6978a; box-shadow: inset 1px 
 /* a framed scrolled window directly in a page would double the page border */
 notebook > stack > scrolledwindow.frame { border-width: 0; }
 /* a scrolled window in a page must not paint the (lighter) window colour over the page: GTK2 shows one colour on the whole page */
-notebook > stack > scrolledwindow { background-color: transparent; }
+notebook > stack scrolledwindow { background-color: transparent; }
 
 notebook > header > tabs > tab {
   min-height: 17px; min-width: 16px; padding: 3px 7px;
