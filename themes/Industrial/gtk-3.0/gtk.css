@@ -433,8 +433,17 @@ menuitem:disabled, modelbutton:disabled { color: @insensitive_fg_color; backgrou
 menuitem:disabled:hover { background-color: transparent; color: @insensitive_fg_color; }
 menuitem label, menuitem accelerator { color: inherit; }
 menuitem accelerator { opacity: 0.6; }
-menuitem arrow { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); min-width: 16px; min-height: 16px; color: inherit; -gtk-icon-transform: scale(0.65); }
-menuitem arrow:dir(rtl) { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+/* menu arrows: the engine's 5x9 solid triangle (not the icon theme's pan-end), dark / white on the highlight / grey when insensitive */
+menuitem arrow { -gtk-icon-source: none; -gtk-icon-transform: none; min-width: 16px; min-height: 16px; color: transparent; background-color: transparent; background-image: url("assets/menu-arrow-right.png"); background-repeat: no-repeat; background-position: center; }
+menuitem arrow:dir(rtl) { background-image: url("assets/menu-arrow-left.png"); }
+menuitem:hover arrow, menuitem:selected arrow { background-image: url("assets/menu-arrow-right-selected.png"); }
+menuitem:hover arrow:dir(rtl), menuitem:selected arrow:dir(rtl) { background-image: url("assets/menu-arrow-left-selected.png"); }
+menuitem:disabled arrow { background-image: url("assets/menu-arrow-right-disabled.png"); }
+menuitem:disabled arrow:dir(rtl) { background-image: url("assets/menu-arrow-left-disabled.png"); }
+menuitem:not(:hover):not(:selected):not(:disabled) arrow, menuitem:not(:hover):not(:selected):not(:disabled) arrow:disabled { background-image: url("assets/menu-arrow-right.png"); }
+menuitem:not(:hover):not(:selected):not(:disabled) arrow:dir(rtl), menuitem:not(:hover):not(:selected):not(:disabled) arrow:dir(rtl):disabled { background-image: url("assets/menu-arrow-left.png"); }
+menuitem:hover arrow:disabled, menuitem:selected arrow:disabled { background-image: url("assets/menu-arrow-right-selected.png"); }
+menuitem:hover arrow:dir(rtl):disabled, menuitem:selected arrow:dir(rtl):disabled { background-image: url("assets/menu-arrow-left-selected.png"); }
 menu arrow.top    { -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
 menu arrow.bottom { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 menu .scroll-button, menu arrow { background-color: transparent; border: none; }
@@ -494,11 +503,6 @@ notebook > header.top    > tabs > tab { margin: 2px 0 0 -1px; border-bottom-widt
 notebook > header.bottom > tabs > tab { margin: 0 0 2px -1px; border-top-width: 0;    border-radius: 0 0 2px 2px; background-image: linear-gradient(to bottom, #bdbdbd 0px, #bdbdbd 1px, #c2c2c2 1px, #c2c2c2 2px, #c8c8c8 2px, #c8c8c8 3px, #cecece 3px, #cecece 4px, #d1d1d1 4px); padding: 1px 5px 2px; }
 notebook > header.left   > tabs > tab { margin: -1px 0 0 2px; border-right-width: 0;  border-radius: 2px 0 0 2px; background-image: linear-gradient(to left, #bdbdbd 0px, #bdbdbd 1px, #c2c2c2 1px, #c2c2c2 2px, #c8c8c8 2px, #c8c8c8 3px, #cecece 3px, #cecece 4px, #d1d1d1 4px); padding: 2px 5px 2px 5px; }
 notebook > header.right  > tabs > tab { margin: -1px 2px 0 0; border-left-width: 0;   border-radius: 0 2px 2px 0; background-image: linear-gradient(to right, #bdbdbd 0px, #bdbdbd 1px, #c2c2c2 1px, #c2c2c2 2px, #c8c8c8 2px, #c8c8c8 3px, #cecece 3px, #cecece 4px, #d1d1d1 4px); padding: 2px 5px 2px 5px; }
-notebook > header > tabs > tab:hover { background-color: #e4e4e4; }
-notebook > header.top    > tabs > tab:hover { background-image: linear-gradient(to top, #d0d0d0 0px, #d0d0d0 1px, #d5d5d5 1px, #d5d5d5 2px, #dbdbdb 2px, #dbdbdb 3px, #e1e1e1 3px, #e1e1e1 4px, #e4e4e4 4px); }
-notebook > header.bottom > tabs > tab:hover { background-image: linear-gradient(to bottom, #d0d0d0 0px, #d0d0d0 1px, #d5d5d5 1px, #d5d5d5 2px, #dbdbdb 2px, #dbdbdb 3px, #e1e1e1 3px, #e1e1e1 4px, #e4e4e4 4px); }
-notebook > header.left   > tabs > tab:hover { background-image: linear-gradient(to left, #d0d0d0 0px, #d0d0d0 1px, #d5d5d5 1px, #d5d5d5 2px, #dbdbdb 2px, #dbdbdb 3px, #e1e1e1 3px, #e1e1e1 4px, #e4e4e4 4px); }
-notebook > header.right  > tabs > tab:hover { background-image: linear-gradient(to right, #d0d0d0 0px, #d0d0d0 1px, #d5d5d5 1px, #d5d5d5 2px, #dbdbdb 2px, #dbdbdb 3px, #e1e1e1 3px, #e1e1e1 4px, #e4e4e4 4px); }
 notebook > header > tabs > tab:checked {
   background-color: #f6f6f6;
   background-image: none;
@@ -509,7 +513,6 @@ notebook > header.top    > tabs > tab:checked { margin-top: 0; margin-bottom: -1
 notebook > header.bottom > tabs > tab:checked { margin-bottom: 0; margin-top: -1px; padding-top: 3px; border-width: 1px; border-top: 1px solid #f6f6f6; }
 notebook > header.left   > tabs > tab:checked { margin-left: 0; margin-right: -1px; border-width: 1px; border-right: 1px solid #f6f6f6; }
 notebook > header.right  > tabs > tab:checked { margin-right: 0; margin-left: -1px; border-width: 1px; border-left: 1px solid #f6f6f6; }
-notebook > header.top > tabs > tab:checked:hover, notebook > header.bottom > tabs > tab:checked:hover, notebook > header.left > tabs > tab:checked:hover, notebook > header.right > tabs > tab:checked:hover { background-color: #f6f6f6; background-image: none; }
 notebook > header > tabs > tab:disabled { color: @insensitive_fg_color; }
 notebook > header > tabs > tab button { padding: 0; min-width: 14px; min-height: 14px; border-color: transparent; background-color: transparent; box-shadow: none; }
 notebook > header > tabs > tab button:hover { background-color: #ffffff; border-color: #9e9e9e; }

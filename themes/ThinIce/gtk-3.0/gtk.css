@@ -242,18 +242,10 @@ scrollbar.vertical slider {
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
 }
-scrollbar.vertical slider:hover {
+scrollbar.vertical slider:hover, scrollbar.vertical slider:active {
   background-color: #E5E5F7;
   background-image: url("assets/slash-v-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
     linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
-  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
-  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
-  background-repeat: no-repeat;
-}
-scrollbar.vertical slider:active {
-  background-color: #C1C1CC;
-  background-image: url("assets/slash-v-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
-    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
   background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
@@ -266,18 +258,10 @@ scrollbar.horizontal slider {
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
 }
-scrollbar.horizontal slider:hover {
+scrollbar.horizontal slider:hover, scrollbar.horizontal slider:active {
   background-color: #E5E5F7;
   background-image: url("assets/slash-h-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
     linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
-  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
-  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
-  background-repeat: no-repeat;
-}
-scrollbar.horizontal slider:active {
-  background-color: #C1C1CC;
-  background-image: url("assets/slash-h-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
-    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
   background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
@@ -415,11 +399,11 @@ menuitem:hover, menuitem:selected, modelbutton:hover, modelbutton:selected {
 menuitem:disabled, modelbutton:disabled { color: @insensitive_fg_color; background-color: transparent; }
 menuitem:disabled:hover { background-color: transparent; color: @insensitive_fg_color; }
 menuitem label, menuitem accelerator { color: inherit; }
-menuitem arrow { color: inherit; background-image: url("assets/arrow-right.png"); }
+menuitem arrow { color: inherit; min-width: 16px; min-height: 16px; background-repeat: no-repeat; background-position: center; background-image: url("assets/menu-arrow-right.png"); }
 menu .scroll-button, menu arrow { background-color: transparent; border: none; }
-menuitem:not(:hover):not(:selected) arrow, menuitem:not(:hover):not(:selected) arrow:disabled { background-image: url("assets/arrow-right.png"); }
-menuitem:hover arrow, menuitem:selected arrow { background-image: url("assets/arrow-right-selected.png"); }
-menuitem:hover arrow:disabled, menuitem:selected arrow:disabled { background-image: url("assets/arrow-right-selected.png"); }
+menuitem:not(:hover):not(:selected) arrow, menuitem:not(:hover):not(:selected) arrow:disabled { background-image: url("assets/menu-arrow-right.png"); }
+menuitem:hover arrow, menuitem:selected arrow { background-image: url("assets/menu-arrow-right-selected.png"); }
+menuitem:hover arrow:disabled, menuitem:selected arrow:disabled { background-image: url("assets/menu-arrow-right-selected.png"); }
 
 /* menubar: raised 1px frame; items turn selection-blue like menu items */
 menubar, .menubar {

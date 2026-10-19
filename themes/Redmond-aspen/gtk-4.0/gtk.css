@@ -292,10 +292,12 @@ modelbutton:hover, modelbutton:selected, modelbutton:checked:hover, menuitem:hov
   background-color: #145ba6; background-image: none; color: #ffffff;
 }
 modelbutton:disabled { color: @insensitive_fg_color; background-image: none; background-color: transparent; }
-modelbutton arrow { color: inherit; background-image: url("assets/arrow-right.png"); }
-modelbutton:hover arrow, modelbutton:selected arrow { background-image: url("assets/arrow-right-selected.png"); }
-modelbutton arrow.left { background-image: url("assets/arrow-left.png"); }
-modelbutton:hover arrow.left { background-image: url("assets/arrow-left-selected.png"); }
+modelbutton arrow, modelbutton arrow.right { color: inherit; min-width: 16px; min-height: 16px; background-repeat: no-repeat; background-position: center; background-image: url("assets/menu-arrow-right.png"); }
+modelbutton:hover arrow, modelbutton:selected arrow { background-image: url("assets/menu-arrow-right-selected.png"); }
+modelbutton arrow.left { background-image: url("assets/menu-arrow-left.png"); }
+modelbutton:hover arrow.left { background-image: url("assets/menu-arrow-left-selected.png"); }
+modelbutton:disabled arrow, modelbutton:disabled arrow.right { background-image: url("assets/menu-arrow-right-disabled.png"); }
+modelbutton:disabled arrow.left { background-image: url("assets/menu-arrow-left-disabled.png"); }
 
 /* menubar: flat with a thin light/dark border; items stay grey and get a thin raised (menu open: sunken) border */
 menubar, popovermenubar {

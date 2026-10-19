@@ -230,8 +230,7 @@ scrollbar slider {
   background-color: #eaeaea; background-repeat: no-repeat; background-position: center;
   background-image: none;
 }
-scrollbar slider:hover { background-color: #f1f1f1; border-color: #a9a9a9; }
-scrollbar slider:active { background-color: #d3d3d3; border-color: #939393; }
+scrollbar slider:hover, scrollbar slider:active { background-color: #f1f1f1; border-color: #a9a9a9; }
 scrollbar.vertical slider { min-height: 13px; margin: -1px 0; }
 scrollbar.horizontal slider { min-width: 13px; margin: 0 -1px; }
 scrollbar slider:disabled { border-color: #9c9c9c; background-color: #dedede; background-image: none; }
@@ -328,11 +327,11 @@ menuitem:hover, menuitem:selected, modelbutton:hover, modelbutton:selected {
 menuitem:disabled, modelbutton:disabled { color: @insensitive_fg_color; background-color: transparent; }
 menuitem:disabled:hover { background-color: transparent; color: @insensitive_fg_color; }
 menuitem label, menuitem accelerator { color: inherit; }
-menuitem arrow { color: inherit; background-image: url("assets/arrow-right.png"); }
+menuitem arrow { color: inherit; min-width: 16px; min-height: 16px; background-repeat: no-repeat; background-position: center; background-image: url("assets/menu-arrow-right.png"); }
 menu .scroll-button, menu arrow { background-color: transparent; border: none; }
-menuitem:not(:hover):not(:selected) arrow, menuitem:not(:hover):not(:selected) arrow:disabled { background-image: url("assets/arrow-right.png"); }
-menuitem:hover arrow, menuitem:selected arrow { background-image: url("assets/arrow-right-selected.png"); }
-menuitem:hover arrow:disabled, menuitem:selected arrow:disabled { background-image: url("assets/arrow-right-selected.png"); }
+menuitem:not(:hover):not(:selected) arrow, menuitem:not(:hover):not(:selected) arrow:disabled { background-image: url("assets/menu-arrow-right.png"); }
+menuitem:hover arrow, menuitem:selected arrow { background-image: url("assets/menu-arrow-right-selected.png"); }
+menuitem:hover arrow:disabled, menuitem:selected arrow:disabled { background-image: url("assets/menu-arrow-right-selected.png"); }
 
 /* menubar: only a dark line along the bottom edge; items turn selection-blue like menu items */
 menubar, .menubar {

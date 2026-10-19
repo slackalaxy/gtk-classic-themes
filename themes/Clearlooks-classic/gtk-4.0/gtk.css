@@ -250,14 +250,13 @@ scrollbar trough { border-radius: 0; background-color: #dbd3cb; }
 scrollbar.vertical trough   { border: 1px solid #aa9c8f; border-top-width: 0; border-bottom-width: 0; background-image: linear-gradient(to right, #d4cac1 0px, #d8cfc7 1px, #dbd3cb 2px); }
 scrollbar.horizontal trough { border: 1px solid #aa9c8f; border-left-width: 0; border-right-width: 0; background-image: linear-gradient(to bottom, #d4cac1 0px, #d8cfc7 1px, #dbd3cb 2px); }
 scrollbar.vertical slider { min-width: 13px; min-height: 30px; margin: 0 -1px; border: 1px solid transparent; border-radius: 0; box-shadow: none; background-color: #efebe7; background-image: url("assets/grip-v.png"), linear-gradient(to right, #fcfcfb 0px, #fcfcfb 1px, #fbfbfa 1px, #fbfbfa 2px, #fbf9f8 2px, #fbf9f8 3px, #faf8f7 3px, #faf8f7 4px, #f9f7f6 4px, #f9f7f6 5px, #f9f7f5 5px, #f9f7f5 6px, #f8f7f5 6px, #f8f7f5 7px, #f8f6f4 7px, #f8f6f4 8px, #f7f5f3 8px, #f7f5f3 9px, #f6f4f2 9px, #f6f4f2 10px, #f5f2f0 10px, #f5f2f0 11px, #f3f1ee 11px, #f3f1ee 12px, #f1efeb 12px, #f1efeb 13px), linear-gradient(to right, #85796d, #928476), linear-gradient(to right, #85796d, #928476), linear-gradient(#85796d, #85796d), linear-gradient(#928476, #928476), linear-gradient(to right, #fcfcfb 0px, #fcfcfb 1px, #f6f4f2 1px, #f6f4f2 2px, #f4f1ee 2px, #f4f1ee 3px, #f2eeeb 3px, #f2eeeb 4px, #f0ece9 4px, #f0ece9 5px, #efebe7 5px, #efebe7 6px, #eeeae6 6px, #eeeae6 7px, #ede8e4 7px, #ede8e4 8px, #ece7e2 8px, #ece7e2 9px, #e9e4df 9px, #e9e4df 10px, #e5dfda 10px, #e5dfda 11px, #e1dbd4 11px, #e1dbd4 12px, #ddd6ce 12px, #ddd6ce 13px); background-size: auto, 100% 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%, 100% 100%; background-position: center, 0 0, 0 0, 0 100%, 0 0, 100% 0, 0 0; background-origin: padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
-scrollbar.vertical slider:hover { background-image: url("assets/grip-v.png"), linear-gradient(to right, #ffffff 0px, #ffffff 1px, #ffffff 1px, #ffffff 2px, #ffffff 2px, #ffffff 3px, #ffffff 3px, #ffffff 4px, #ffffff 4px, #ffffff 5px, #ffffff 5px, #ffffff 6px, #feffff 6px, #feffff 7px, #fefefe 7px, #fefefe 8px, #fdfdfc 8px, #fdfdfc 9px, #fcfcfb 9px, #fcfcfb 10px, #fbfaf9 10px, #fbfaf9 11px, #f9f9f7 11px, #f9f9f7 12px, #f7f7f4 12px, #f7f7f4 13px), linear-gradient(to right, #85796d, #928476), linear-gradient(to right, #85796d, #928476), linear-gradient(#85796d, #85796d), linear-gradient(#928476, #928476), linear-gradient(to right, #ffffff 0px, #ffffff 1px, #fcfcfb 1px, #fcfcfb 2px, #faf9f7 2px, #faf9f7 3px, #f8f6f4 3px, #f8f6f4 4px, #f6f4f2 4px, #f6f4f2 5px, #f5f3f0 5px, #f5f3f0 6px, #f4f2ef 6px, #f4f2ef 7px, #f3f0ed 7px, #f3f0ed 8px, #f2efeb 8px, #f2efeb 9px, #efece8 9px, #efece8 10px, #ebe7e2 10px, #ebe7e2 11px, #e7e2dc 11px, #e7e2dc 12px, #e3ddd6 12px, #e3ddd6 13px); background-size: auto, 100% 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%, 100% 100%; background-position: center, 0 0, 0 0, 0 100%, 0 0, 100% 0, 0 0; background-origin: padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
-scrollbar.vertical slider:active { box-shadow: none; background-image: url("assets/grip-v.png"), linear-gradient(#c0b5a9, #c0b5a9), linear-gradient(#c0b5a9, #c0b5a9), linear-gradient(#e2dbd4, #e2dbd4), linear-gradient(#e2dbd4, #e2dbd4), linear-gradient(#6d6762, #6d6762), linear-gradient(#6d6762, #6d6762), linear-gradient(#6d6762, #6d6762), linear-gradient(#6d6762, #6d6762), linear-gradient(to right, #dfdbd7, #c7c1bb); background-size: auto, 100% 1px, 1px 100%, 100% 1px, 1px 100%, 100% 1px, 100% 1px, 1px 100%, 1px 100%, 100% 100%; background-position: center, 0 0, 0 0, 0 100%, 100% 0, 0 0, 0 100%, 0 0, 100% 0, 0 0; background-origin: padding-box, padding-box, padding-box, padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
+scrollbar.vertical slider:hover, scrollbar.vertical slider:active { background-image: url("assets/grip-v.png"), linear-gradient(to right, #ffffff 0px, #ffffff 1px, #ffffff 1px, #ffffff 2px, #ffffff 2px, #ffffff 3px, #ffffff 3px, #ffffff 4px, #ffffff 4px, #ffffff 5px, #ffffff 5px, #ffffff 6px, #feffff 6px, #feffff 7px, #fefefe 7px, #fefefe 8px, #fdfdfc 8px, #fdfdfc 9px, #fcfcfb 9px, #fcfcfb 10px, #fbfaf9 10px, #fbfaf9 11px, #f9f9f7 11px, #f9f9f7 12px, #f7f7f4 12px, #f7f7f4 13px), linear-gradient(to right, #85796d, #928476), linear-gradient(to right, #85796d, #928476), linear-gradient(#85796d, #85796d), linear-gradient(#928476, #928476), linear-gradient(to right, #ffffff 0px, #ffffff 1px, #fcfcfb 1px, #fcfcfb 2px, #faf9f7 2px, #faf9f7 3px, #f8f6f4 3px, #f8f6f4 4px, #f6f4f2 4px, #f6f4f2 5px, #f5f3f0 5px, #f5f3f0 6px, #f4f2ef 6px, #f4f2ef 7px, #f3f0ed 7px, #f3f0ed 8px, #f2efeb 8px, #f2efeb 9px, #efece8 9px, #efece8 10px, #ebe7e2 10px, #ebe7e2 11px, #e7e2dc 11px, #e7e2dc 12px, #e3ddd6 12px, #e3ddd6 13px); background-size: auto, 100% 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%, 100% 100%; background-position: center, 0 0, 0 0, 0 100%, 0 0, 100% 0, 0 0; background-origin: padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
 scrollbar.horizontal slider { min-width: 30px; min-height: 13px; margin: -1px 0; border: 1px solid transparent; border-radius: 0; box-shadow: none; background-color: #efebe7; background-image: url("assets/grip-h.png"), linear-gradient(to bottom, #fcfcfb 0px, #fcfcfb 1px, #fbfbfa 1px, #fbfbfa 2px, #fbf9f8 2px, #fbf9f8 3px, #faf8f7 3px, #faf8f7 4px, #f9f7f6 4px, #f9f7f6 5px, #f9f7f5 5px, #f9f7f5 6px, #f8f7f5 6px, #f8f7f5 7px, #f8f6f4 7px, #f8f6f4 8px, #f7f5f3 8px, #f7f5f3 9px, #f6f4f2 9px, #f6f4f2 10px, #f5f2f0 10px, #f5f2f0 11px, #f3f1ee 11px, #f3f1ee 12px, #f1efeb 12px, #f1efeb 13px), linear-gradient(to bottom, #85796d, #928476), linear-gradient(to bottom, #85796d, #928476), linear-gradient(#85796d, #85796d), linear-gradient(#928476, #928476), linear-gradient(to bottom, #fcfcfb 0px, #fcfcfb 1px, #f6f4f2 1px, #f6f4f2 2px, #f4f1ee 2px, #f4f1ee 3px, #f2eeeb 3px, #f2eeeb 4px, #f0ece9 4px, #f0ece9 5px, #efebe7 5px, #efebe7 6px, #eeeae6 6px, #eeeae6 7px, #ede8e4 7px, #ede8e4 8px, #ece7e2 8px, #ece7e2 9px, #e9e4df 9px, #e9e4df 10px, #e5dfda 10px, #e5dfda 11px, #e1dbd4 11px, #e1dbd4 12px, #ddd6ce 12px, #ddd6ce 13px); background-size: auto, 1px 100%, 1px 100%, 1px 100%, 100% 1px, 100% 1px, 100% 100%; background-position: center, 0 0, 0 0, 100% 0, 0 0, 0 100%, 0 0; background-origin: padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
-scrollbar.horizontal slider:hover { background-image: url("assets/grip-h.png"), linear-gradient(to bottom, #ffffff 0px, #ffffff 1px, #ffffff 1px, #ffffff 2px, #ffffff 2px, #ffffff 3px, #ffffff 3px, #ffffff 4px, #ffffff 4px, #ffffff 5px, #ffffff 5px, #ffffff 6px, #feffff 6px, #feffff 7px, #fefefe 7px, #fefefe 8px, #fdfdfc 8px, #fdfdfc 9px, #fcfcfb 9px, #fcfcfb 10px, #fbfaf9 10px, #fbfaf9 11px, #f9f9f7 11px, #f9f9f7 12px, #f7f7f4 12px, #f7f7f4 13px), linear-gradient(to bottom, #85796d, #928476), linear-gradient(to bottom, #85796d, #928476), linear-gradient(#85796d, #85796d), linear-gradient(#928476, #928476), linear-gradient(to bottom, #ffffff 0px, #ffffff 1px, #fcfcfb 1px, #fcfcfb 2px, #faf9f7 2px, #faf9f7 3px, #f8f6f4 3px, #f8f6f4 4px, #f6f4f2 4px, #f6f4f2 5px, #f5f3f0 5px, #f5f3f0 6px, #f4f2ef 6px, #f4f2ef 7px, #f3f0ed 7px, #f3f0ed 8px, #f2efeb 8px, #f2efeb 9px, #efece8 9px, #efece8 10px, #ebe7e2 10px, #ebe7e2 11px, #e7e2dc 11px, #e7e2dc 12px, #e3ddd6 12px, #e3ddd6 13px); background-size: auto, 1px 100%, 1px 100%, 1px 100%, 100% 1px, 100% 1px, 100% 100%; background-position: center, 0 0, 0 0, 100% 0, 0 0, 0 100%, 0 0; background-origin: padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
-scrollbar.horizontal slider:active { box-shadow: none; background-image: url("assets/grip-h.png"), linear-gradient(#c0b5a9, #c0b5a9), linear-gradient(#c0b5a9, #c0b5a9), linear-gradient(#e2dbd4, #e2dbd4), linear-gradient(#e2dbd4, #e2dbd4), linear-gradient(#6d6762, #6d6762), linear-gradient(#6d6762, #6d6762), linear-gradient(#6d6762, #6d6762), linear-gradient(#6d6762, #6d6762), linear-gradient(to bottom, #dfdbd7, #c7c1bb); background-size: auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px, 1px 100%, 1px 100%, 100% 1px, 100% 1px, 100% 100%; background-position: center, 0 0, 0 0, 100% 0, 0 100%, 0 0, 100% 0, 0 0, 0 100%, 0 0; background-origin: padding-box, padding-box, padding-box, padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
+scrollbar.horizontal slider:hover, scrollbar.horizontal slider:active { background-image: url("assets/grip-h.png"), linear-gradient(to bottom, #ffffff 0px, #ffffff 1px, #ffffff 1px, #ffffff 2px, #ffffff 2px, #ffffff 3px, #ffffff 3px, #ffffff 4px, #ffffff 4px, #ffffff 5px, #ffffff 5px, #ffffff 6px, #feffff 6px, #feffff 7px, #fefefe 7px, #fefefe 8px, #fdfdfc 8px, #fdfdfc 9px, #fcfcfb 9px, #fcfcfb 10px, #fbfaf9 10px, #fbfaf9 11px, #f9f9f7 11px, #f9f9f7 12px, #f7f7f4 12px, #f7f7f4 13px), linear-gradient(to bottom, #85796d, #928476), linear-gradient(to bottom, #85796d, #928476), linear-gradient(#85796d, #85796d), linear-gradient(#928476, #928476), linear-gradient(to bottom, #ffffff 0px, #ffffff 1px, #fcfcfb 1px, #fcfcfb 2px, #faf9f7 2px, #faf9f7 3px, #f8f6f4 3px, #f8f6f4 4px, #f6f4f2 4px, #f6f4f2 5px, #f5f3f0 5px, #f5f3f0 6px, #f4f2ef 6px, #f4f2ef 7px, #f3f0ed 7px, #f3f0ed 8px, #f2efeb 8px, #f2efeb 9px, #efece8 9px, #efece8 10px, #ebe7e2 10px, #ebe7e2 11px, #e7e2dc 11px, #e7e2dc 12px, #e3ddd6 12px, #e3ddd6 13px); background-size: auto, 1px 100%, 1px 100%, 1px 100%, 100% 1px, 100% 1px, 100% 100%; background-position: center, 0 0, 0 0, 100% 0, 0 0, 0 100%, 0 0; background-origin: padding-box, padding-box, border-box, border-box, border-box, border-box, padding-box; background-repeat: no-repeat; background-clip: border-box; }
 scrollbar slider:disabled { background-image: none; background-color: #efebe7; border-color: #c0b5a9; box-shadow: none; }
 scrolledwindow { background-color: @theme_bg_color; }
 scrolledwindow.frame { border: 1px solid #c0b5a9; border-radius: 0; }
+popover scrolledwindow { background-color: transparent; }
 scrolledwindow undershoot.top, scrolledwindow undershoot.bottom, scrolledwindow undershoot.left, scrolledwindow undershoot.right { background-image: none; }
 scrolledwindow junction { background-color: #efebe7; border: none; }
 
@@ -339,10 +338,12 @@ modelbutton:hover, modelbutton:selected, modelbutton:checked:hover, menuitem:hov
   border-color: #556875; color: #ffffff;
 }
 modelbutton:disabled { color: @insensitive_fg_color; background-image: none; background-color: transparent; border-color: transparent; }
-modelbutton arrow { color: inherit; }
-modelbutton:hover arrow, modelbutton:selected arrow { background-image: url("assets/arrow-right-selected.png"); }
-modelbutton arrow.left { background-image: url("assets/arrow-left.png"); }
-modelbutton:hover arrow.left { background-image: url("assets/arrow-left.png"); }
+modelbutton arrow, modelbutton arrow.right { color: transparent; min-width: 16px; min-height: 16px; background-repeat: no-repeat; background-position: center; background-image: url("assets/menu-arrow-right.png"); }
+modelbutton:hover arrow, modelbutton:selected arrow { background-image: url("assets/menu-arrow-right-selected.png"); }
+modelbutton arrow.left { background-image: url("assets/menu-arrow-left.png"); }
+modelbutton:hover arrow.left { background-image: url("assets/menu-arrow-left-selected.png"); }
+modelbutton:disabled arrow, modelbutton:disabled arrow.right { background-image: url("assets/menu-arrow-right-disabled.png"); }
+modelbutton:disabled arrow.left { background-image: url("assets/menu-arrow-left-disabled.png"); }
 
 menubar, popovermenubar {
   background-color: #efebe7;
@@ -351,7 +352,7 @@ menubar, popovermenubar {
   color: @theme_fg_color;
 }
 menubar > item, popovermenubar > item {
-  padding: 2px 6px 0;
+  padding: 2px 6px 1px;
   border: 1px solid transparent; border-radius: 3px;
   background-color: transparent; color: @theme_fg_color;
 }
@@ -407,7 +408,6 @@ notebook > header.top > tabs > tab {
   background-image: linear-gradient(to bottom, #e3e0dc, #d4cfca); box-shadow: inset 1px 1px 0 #fcfbfa, inset -1px 0 0 #ddd4cd;
 }
 notebook > header.top > tabs > tab + tab { margin-left: -1px; }
-notebook > header.top > tabs > tab:not(:checked):hover { background-image: linear-gradient(to bottom, #edebe8, #dbd3cb); }
 notebook > header.top > tabs > tab:checked {
   margin-top: 0; margin-bottom: -1px; padding-bottom: 4px;
   border-color: #7e7166; border-top-color: #52636f; border-bottom: 1px solid #eae4df; border-radius: 3px 3px 0 0;
@@ -420,7 +420,6 @@ notebook > header.bottom > tabs > tab {
   background-image: linear-gradient(to top, #e3e0dc, #d4cfca); box-shadow: inset 1px 0 0 #fcfbfa, inset -1px -1px 0 #ddd4cd;
 }
 notebook > header.bottom > tabs > tab + tab { margin-left: -1px; }
-notebook > header.bottom > tabs > tab:not(:checked):hover { background-image: linear-gradient(to top, #edebe8, #dbd3cb); }
 notebook > header.bottom > tabs > tab:checked {
   margin-bottom: 0; margin-top: -1px; padding-top: 4px;
   border-color: #7e7166; border-bottom-color: #52636f; border-top: 1px solid #eae4df; border-radius: 0 0 3px 3px;
@@ -433,7 +432,6 @@ notebook > header.left > tabs > tab {
   background-image: linear-gradient(to right, #e3e0dc, #d4cfca); box-shadow: inset 1px 1px 0 #fcfbfa, inset 0 -1px 0 #ddd4cd;
 }
 notebook > header.left > tabs > tab + tab { margin-top: -1px; }
-notebook > header.left > tabs > tab:not(:checked):hover { background-image: linear-gradient(to right, #edebe8, #dbd3cb); }
 notebook > header.left > tabs > tab:checked {
   margin-left: 0; margin-right: -1px;
   border-color: #7e7166; border-left-color: #52636f; border-right: 1px solid #eae4df; border-radius: 3px 0 0 3px;
@@ -446,7 +444,6 @@ notebook > header.right > tabs > tab {
   background-image: linear-gradient(to left, #e3e0dc, #d4cfca); box-shadow: inset 0 1px 0 #fcfbfa, inset -1px -1px 0 #ddd4cd;
 }
 notebook > header.right > tabs > tab + tab { margin-top: -1px; }
-notebook > header.right > tabs > tab:not(:checked):hover { background-image: linear-gradient(to left, #edebe8, #dbd3cb); }
 notebook > header.right > tabs > tab:checked {
   margin-right: 0; margin-left: -1px;
   border-color: #7e7166; border-right-color: #52636f; border-left: 1px solid #eae4df; border-radius: 0 3px 3px 0;

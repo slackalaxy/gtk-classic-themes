@@ -224,8 +224,7 @@ scrollbar slider {
 }
 scrollbar.vertical slider { min-height: 24px; }
 scrollbar.horizontal slider { min-width: 24px; }
-scrollbar slider:hover { background-color: #f1f1f1; border-color: #a9a9a9; }
-scrollbar slider:active { background-color: #d3d3d3; }
+scrollbar slider:hover, scrollbar slider:active { background-color: #f1f1f1; border-color: #a9a9a9; }
 scrollbar slider:disabled { border-color: #9c9c9c; background-color: #dedede; background-image: none; }
 scrolledwindow { background-color: @theme_bg_color; }
 scrolledwindow.frame { border: 1px solid #a4a4a4; border-radius: 0; }
@@ -293,10 +292,10 @@ modelbutton:hover, modelbutton:selected, modelbutton:checked:hover, menuitem:hov
   background-color: #729fcf; background-image: none; color: #ffffff;
 }
 modelbutton:disabled { color: @insensitive_fg_color; background-image: none; background-color: transparent; }
-modelbutton arrow, modelbutton:not(:hover):not(:selected) arrow, modelbutton:not(:hover):not(:selected) arrow:disabled { color: inherit; background-image: url("assets/arrow-right.png"); }
-modelbutton:hover arrow, modelbutton:selected arrow, modelbutton:hover arrow:disabled { background-image: url("assets/arrow-right-selected.png"); }
-modelbutton arrow.left { background-image: url("assets/arrow-left.png"); }
-modelbutton:hover arrow.left { background-image: url("assets/arrow-left-selected.png"); }
+modelbutton arrow, modelbutton:not(:hover):not(:selected) arrow, modelbutton:not(:hover):not(:selected) arrow:disabled { color: inherit; min-width: 16px; min-height: 16px; background-repeat: no-repeat; background-position: center; background-image: url("assets/menu-arrow-right.png"); }
+modelbutton:hover arrow, modelbutton:selected arrow, modelbutton:hover arrow:disabled { background-image: url("assets/menu-arrow-right-selected.png"); }
+modelbutton arrow.left { background-image: url("assets/menu-arrow-left.png"); }
+modelbutton:hover arrow.left { background-image: url("assets/menu-arrow-left-selected.png"); }
 
 /* menubar: only a dark line along the bottom edge; items turn selection-blue like menu items */
 menubar, popovermenubar {
@@ -305,7 +304,7 @@ menubar, popovermenubar {
   color: @theme_fg_color;
 }
 menubar > item, popovermenubar > item {
-  padding: 2px 6px;
+  padding: 2px 6px 3px;
   border: none; border-radius: 0;
   background-color: transparent; color: @theme_fg_color;
 }

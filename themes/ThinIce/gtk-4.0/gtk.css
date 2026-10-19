@@ -235,18 +235,10 @@ scrollbar.vertical slider {
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
 }
-scrollbar.vertical slider:hover {
+scrollbar.vertical slider:hover, scrollbar.vertical slider:active {
   background-color: #E5E5F7;
   background-image: url("assets/slash-v-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
     linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
-  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
-  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
-  background-repeat: no-repeat;
-}
-scrollbar.vertical slider:active {
-  background-color: #C1C1CC;
-  background-image: url("assets/slash-v-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
-    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
   background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
@@ -259,18 +251,10 @@ scrollbar.horizontal slider {
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
 }
-scrollbar.horizontal slider:hover {
+scrollbar.horizontal slider:hover, scrollbar.horizontal slider:active {
   background-color: #E5E5F7;
   background-image: url("assets/slash-h-hover.png"), url("assets/slider-tl-hover.png"), url("assets/slider-br-hover.png"),
     linear-gradient(#8686c7, #8686c7), linear-gradient(#8686c7, #8686c7), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
-  background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
-  background-position: center, left top, right bottom, right top, left bottom, left top, left top;
-  background-repeat: no-repeat;
-}
-scrollbar.horizontal slider:active {
-  background-color: #C1C1CC;
-  background-image: url("assets/slash-h-active.png"), url("assets/slider-tl-active.png"), url("assets/slider-br-active.png"),
-    linear-gradient(#838393, #838393), linear-gradient(#838393, #838393), linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
   background-size: auto, auto, auto, 1px 100%, 100% 1px, 1px 100%, 100% 1px;
   background-position: center, left top, right bottom, right top, left bottom, left top, left top;
   background-repeat: no-repeat;
@@ -380,10 +364,10 @@ modelbutton:hover, modelbutton:selected, modelbutton:checked:hover, menuitem:hov
   background-color: #336699; background-image: none; color: #ffffff;
 }
 modelbutton:disabled { color: @insensitive_fg_color; background-image: none; background-color: transparent; }
-modelbutton arrow, modelbutton:not(:hover):not(:selected) arrow, modelbutton:not(:hover):not(:selected) arrow:disabled { color: inherit; background-image: url("assets/arrow-right.png"); }
-modelbutton:hover arrow, modelbutton:selected arrow, modelbutton:hover arrow:disabled { background-image: url("assets/arrow-right-selected.png"); }
-modelbutton arrow.left { background-image: url("assets/arrow-left.png"); }
-modelbutton:hover arrow.left { background-image: url("assets/arrow-left-selected.png"); }
+modelbutton arrow, modelbutton:not(:hover):not(:selected) arrow, modelbutton:not(:hover):not(:selected) arrow:disabled { color: inherit; min-width: 16px; min-height: 16px; background-repeat: no-repeat; background-position: center; background-image: url("assets/menu-arrow-right.png"); }
+modelbutton:hover arrow, modelbutton:selected arrow, modelbutton:hover arrow:disabled { background-image: url("assets/menu-arrow-right-selected.png"); }
+modelbutton arrow.left { background-image: url("assets/menu-arrow-left.png"); }
+modelbutton:hover arrow.left { background-image: url("assets/menu-arrow-left-selected.png"); }
 
 /* menubar: raised 1px frame; items turn selection-blue like menu items */
 menubar, popovermenubar {
@@ -392,7 +376,7 @@ menubar, popovermenubar {
   color: @theme_fg_color;
 }
 menubar > item, popovermenubar > item {
-  padding: 2px 6px;
+  padding: 3px 6px;
   border: none; border-radius: 0;
   background-color: transparent; color: @theme_fg_color;
 }
