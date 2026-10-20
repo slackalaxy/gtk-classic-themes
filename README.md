@@ -66,4 +66,5 @@ gtk-overlay-scrolling=false
 - **Not tested**: other desktops (MATE, Cinnamon, GNOME) and other GTK versions. Reports are welcome.
 
 ## Links
+- Sibling project: [gnome-colors](https://github.com/slackalaxy/gnome-colors), an unofficial update of the GNOME-Colors icon theme.
 - For a well-maintained, actively developed GTK3/GTK4 port of a classic theme, see [Bluecurve](https://github.com/neeeeow/Bluecurve).
