@@ -113,6 +113,8 @@ button.flat:disabled, .toolbar button:disabled { background-image: none; backgro
 .linked:not(.vertical) > button:not(:first-child),
 .linked:not(.vertical) > menubutton:not(:first-child) > button,
 .linked:not(.vertical) > dropdown:not(:first-child) > button { border-left-width: 0; }
+/* header bar buttons are flat: without this the selected one (e.g. in a stack switcher) has no left edge */
+headerbar .linked:not(.vertical) > button:not(:first-child) { border-left-width: 1px; }
 .linked.vertical > button:not(:first-child) { border-top-width: 0; }
 
 /* ===== check boxes (10px) and radio buttons (12px): bitmaps of the engine's own drawing ===== */

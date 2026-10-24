@@ -40,7 +40,7 @@ For more details about the themes, credits and original authors check [themes/RE
 ## Recommended GTK3 settings
 GTK3 uses overlay (auto-hiding) scrollbars by default, which these classic themes are not designed for. To keep the scrollbars always visible, set this environment variable:
 
-```
+```sh
 export GTK_OVERLAY_SCROLLING=0
 ```
 
@@ -49,7 +49,7 @@ Put it in a file your session reads at login, for example `~/.xinitrc`, `~/.prof
 ## Recommended GTK4 settings
 GTK4 also uses overlay (auto-hiding) scrollbars by default, and its default font rendering is not always as crisp as GTK2/GTK3. Therefore, you may need to put this in `~/.config/gtk-4.0/settings.ini`:
 
-```
+```ini
 [Settings]
 gtk-hint-font-metrics=true
 gtk-font-rendering=manual

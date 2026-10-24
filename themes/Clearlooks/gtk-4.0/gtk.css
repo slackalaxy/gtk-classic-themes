@@ -144,6 +144,8 @@ button.flat:disabled, .toolbar button:disabled { background-image: none; backgro
 .linked:not(.vertical) > button:not(:first-child),
 .linked:not(.vertical) > menubutton:not(:first-child) > button,
 .linked:not(.vertical) > dropdown:not(:first-child) > button { border-top-left-radius: 0; border-bottom-left-radius: 0; border-left-width: 0; }
+/* header bar buttons are flat: without this the selected one (e.g. in a stack switcher) has no left edge */
+headerbar .linked:not(.vertical) > button:not(:first-child) { border-left-width: 1px; }
 .linked:not(.vertical) > button:not(:last-child),
 .linked:not(.vertical) > menubutton:not(:last-child) > button,
 .linked:not(.vertical) > dropdown:not(:last-child) > button { border-top-right-radius: 0; border-bottom-right-radius: 0; }
